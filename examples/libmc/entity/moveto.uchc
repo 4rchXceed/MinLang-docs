@@ -1,0 +1,4 @@
+// Move an entity to another (useful for projectiles) (Needs to be limit=1)
+[MoveTo(String source; String dest; Float speed;)] => <execute as ?source? at ?source? run tp @s ^ ^ ^?speed? facing entity ?dest?>
+
+[MoveToXYZ(String source; String dest; String xyz;)] => <execute as ?source? at ?source? run tp @s ?xyz? facing entity ?dest?>

@@ -1,0 +1,46 @@
+{
+  "globalVars": [
+    {
+      "name": "self",
+      "value": {
+        "type": "CodeBlock",
+        "preProcessedValue": null,
+        "localVarName": "self",
+        "isFunctionRawCode": false,
+        "functionInvocation": {
+          "functionName": "Main",
+          "argumentsValues": [],
+          "expressionType": null
+        }
+      }
+    }
+  ],
+  "customDefines": [],
+  "functions": [
+    {
+      "name": "MainCall",
+      "functionArgs": [],
+      "lines": [
+        {
+          "functionName": "Main",
+          "argumentsValues": [],
+          "expressionType": "FunctionInvocationExpression"
+        }
+      ],
+      "isAsCode": false
+    },
+    {
+      "name": "Main",
+      "functionArgs": [],
+      "lines": [
+        {
+          "functionName": "MainCall",
+          "argumentsValues": [],
+          "expressionType": "FunctionInvocationExpression"
+        }
+      ],
+      "isAsCode": false
+    }
+  ],
+  "localVariables": []
+}

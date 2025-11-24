@@ -1,0 +1,2 @@
+// Clear X item to the player
+[Clear(String itemId; String number;)] => <clear @a ?itemId? ?number?>

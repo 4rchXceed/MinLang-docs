@@ -1,0 +1,29 @@
+site_name: MinLang + SeriaLang Documentation
+
+nav:
+  - Home: index.md
+  - SeriaLang:
+      - Compiler:
+          - Exceptions: SeriaLang/Compiler/Exceptions.md
+          - CommandLine Arguments: SeriaLang/Compiler/CommandLineArguments.md
+      - Language:
+          - Overview: SeriaLang/Language/Overview.md
+          - Types: SeriaLang/Language/Types.md
+          - Variables: SeriaLang/Language/Variables.md
+          - Comments: SeriaLang/Language/Comments.md
+          - Functions: SeriaLang/Language/Functions.md
+          - SeriaLang Header File: SeriaLang/Language/ULHC.md
+          - If And For Statements: SeriaLang/Language/IfAndFor.md
+          - Importing: SeriaLang/Language/Import.md
+          - Pointers: SeriaLang/Language/Pointers.md
+          - String Concat: SeriaLang/Language/Concat.md
+  - MinLang:
+        - Compiler:
+            - Exceptions: MinLang/Compiler/Exceptions.md
+            - CommandLine Arguments: MinLang/Compiler/CommandLineArguments.md
+        - Overview: MinLang/Overview.md
+        - Limitations: MinLang/Limitations.md
+        - Libraries:
+            - stdlib: MinLang/Libraries/stdlib.md
+            - mclib: MinLang/Libraries/libmc.md
+theme: readthedocs

@@ -1,0 +1,6 @@
+%import libmc/cmd.uchc
+
+ascode fun WhileGt(String var; Int value; String callback;):
+    If (#::{$::var} > $::value): Execute()<$::callback>
+    If (#::{$::var} > $::value): Execute()<$::self>
+WhileGt

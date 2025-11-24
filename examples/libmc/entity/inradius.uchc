@@ -1,0 +1,5 @@
+// Is there an entity in the radius? (entitySelector for e.g.: tag=!Tag,type=player)
+[EntityInRadius(String maxDistance; String command; String entitySelector;)] => <execute at @s as @e[distance=..?maxDistance?,?entitySelector?] run ?command?>
+
+// "Not" version
+[EntityNotInRadius(String maxDistance; String command; String entitySelector;)] => <execute at @s unless entity @e[distance=..?maxDistance?,?entitySelector?] run ?command?>

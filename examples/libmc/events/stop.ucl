@@ -1,0 +1,3 @@
+ascode fun StopEvent(String stopEventScoreboardName;):
+    #::{&"__sys_stop_${$::stopEventScoreboardName}"}::Set()<1>
+StopEvent

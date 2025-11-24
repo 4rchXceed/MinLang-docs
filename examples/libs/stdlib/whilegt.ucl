@@ -1,0 +1,6 @@
+%import execute.uchc
+
+ascode fun WhileQt(String var; Int value; String whileQtCallback;):
+    If (#::{$::var} > $::value): Execute()<$::whileQtCallback>
+    If (#::{$::var} > $::value): Execute()<$::self>
+WhileQt

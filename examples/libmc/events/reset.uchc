@@ -1,0 +1,2 @@
+// Event "reset" command
+[EvReset(String evName;)] => <scoreboard players reset @a __sys_event_?evName?>

@@ -1,0 +1,2 @@
+// Register an Event
+[EventRegisterUCHC(String varName; String event;)] => <scoreboard objectives add __sys_event_?varName? ?event?>

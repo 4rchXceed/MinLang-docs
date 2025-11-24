@@ -1,0 +1,2 @@
+// Execute if the entity DOESN'T exists
+[NotEntity(String selector; String command;)] => <execute unless entity ?selector? run ?command?>

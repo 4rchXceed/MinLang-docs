@@ -1,0 +1,64 @@
+%import blocks/clone.uchc
+%import blocks/fill.uchc
+%import executeat.uchc
+%import executeas.uchc
+%import asat.uchc
+%import entity/tp.uchc
+%import entity/inradius.uchc
+%import entity/summon.uchc
+%import entity/kill.uchc
+%import player/inhand.ucl
+
+const String $planeCoos1 = "8 -12 -1"
+const String $planeCoos2 = "-9 -8 21"
+const String $leftArmorStandPos = "~3 ~2 ~12"
+const String $rightArmorStandPos = "~3 ~2 ~11"
+const String $playerPos = "~3 ~2.0 ~11.5"
+const Float $distanceRMin = 8
+const Float $distanceLMax = 17
+
+fun PlaneEvent():
+    InHand()<"minecraft:pointed_dripstone"; <%MoveDown()<>%>>
+    InHand()<"minecraft:sea_pickle"; <%MoveUp()<>%>>
+PlaneEvent
+
+fun PlaneInit():
+    Kill()<"@e[tag=raycast]">
+    As()<"@p"; <%AtAnchored()<"@s"; <%SummonData()<"armor_stand"; "^ ^ ^12"; "{Tags:['raycast']}">%>>%>> // Invisible:true,Invulnerable:true,
+PlaneInit
+
+fun MoveUp():
+    AsAt()<"@e[tag=plane]"; <%TpEntity()<"@s"; "~ ~1 ~">%>>
+MoveUp
+
+fun MoveDown():
+    AsAt()<"@e[tag=plane]"; <%TpEntity()<"@s"; "~ ~-1 ~">%>>
+MoveDown
+
+fun MoveLeft():
+    AsAt()<"@e[tag=plane]"; <%TpEntity()<"@s"; "~ ~ ~-1">%>>
+MoveLeft
+
+fun MoveRight():
+    AsAt()<"@e[tag=plane]"; <%TpEntity()<"@s"; "~ ~ ~1">%>>
+MoveRight
+
+loop fun RaycastLoop():
+    As()<"@p"; <%AtAnchored()<"@s"; <%TpEntity()<"@e[tag=raycast,limit=1]"; "^ ^ ^12">%>>%>>
+RaycastLoop
+
+fun CopyPlane():
+    
+    // Tp entities
+    AsAt()<"@e[tag=plane]"; <%EntityInRadius()<20; <%At()<"@s"; <%TpEntity()<"@s"; "~-2 ~ ~">%>>%>; "type=!player,tag=!lpos,tag=!rpos">%>>
+    // Tp player
+    AsAt()<"@e[tag=plane]"; <%EntityInRadius()<20; <%TpEntity()<"@s"; $::playerPos>%>; "type=player">%>>
+
+    As()<"@e[tag=plane]"; <%EntityInRadius()<$::distanceRMin; <%MoveLeft()<>%>; "tag=raycast">%>>
+    As()<"@e[tag=plane]"; <%EntityNotInRadius()<$::distanceLMax; <%MoveRight()<>%>; "tag=raycast">%>>
+
+    // Copy the plane
+    At()<"@e[tag=plane]"; <%FillBlocks()<"~ ~ ~"; "~17 ~4 ~22"; "air">%>>
+    At()<"@e[tag=plane]"; <%CloneBlocks()<$::planeCoos1; $::planeCoos2; "~ ~ ~">%>>
+
+CopyPlane

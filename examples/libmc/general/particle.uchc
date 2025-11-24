@@ -1,0 +1,2 @@
+// /particle
+[Particle(String name; String xyz;)] => <particle ?name? ?xyz?>

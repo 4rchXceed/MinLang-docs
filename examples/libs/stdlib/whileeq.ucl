@@ -1,0 +1,6 @@
+%import execute.uchc
+
+ascode fun WhileEqual(String var; Int value; String whileEqualCallback;):
+    If (#::{$::var} = $::value): Execute()<$::whileEqualCallback>
+    If (#::{$::var} = $::value): Execute()<$::self>
+WhileEqual

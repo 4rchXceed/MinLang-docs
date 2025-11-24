@@ -1,0 +1,6 @@
+%import executeas.uchc
+
+// Checks if "inHandMcId" is in the player's hand
+ascode fun InInventory(String inInventoryMcId; String inInventoryCallback;):
+    As()<&"@a[nbt={Inventory:[{id:'${$::inInventoryMcId}'}]}]"; $::inInventoryCallback>
+InInventory

@@ -1,0 +1,19 @@
+%import entity/tp.uchc
+%import executeat.uchc
+%import executeas.uchc
+%import utils.ucl
+%import blocks/not.uchc
+%import entity/kill.uchc
+%import entity/summon.uchc
+%import entity/not.uchc
+
+fun OnGroud():
+    ExplodeAt()<"@e[tag=projectile]">
+    Kill()<"@e[type=arrow]">
+OnGroud
+
+loop fun MainLoop():
+    As()<"@e[type=arrow]"; <%At()<"@s"; <% TpEntity()<"@e[tag=projectile]"; "~ ~ ~">%>>%>>
+    As()<"@e[type=arrow]"; <%At()<"@s"; <% IfNotBlock()<"~ ~-1 ~"; "air"; <% OnGroud()<> %>> %>>%>>
+    As()<"@e[type=arrow]"; <%NotEntity()<"@e[tag=projectile]"; <%At()<"@p"; <%SummonTag()<"creeper"; "~ ~ ~"; "projectile">%>>%>>%>>
+MainLoop

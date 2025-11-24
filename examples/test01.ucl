@@ -1,0 +1,12 @@
+%import whilegt.ucl
+%import libmc/cmd.uchc
+
+fun Say():
+    #::index01::Sub()<1>
+    Print()<"Say called!">
+Say
+
+fun Main():
+    Int index01 = 10
+    WhileEqual()<"index01"; 1; <%Say()<>%>>
+Main

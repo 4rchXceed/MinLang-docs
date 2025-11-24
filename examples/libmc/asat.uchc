@@ -1,0 +1,2 @@
+// Execute At
+[AsAt(String as; String command;)] => <execute as ?as? at @s run ?command?>

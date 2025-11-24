@@ -1,0 +1,17 @@
+%import executeas.uchc
+%import executeat.uchc
+%import entity/tp.uchc
+%import entity/inradius.uchc
+%import entity/damage.uchc
+%import entity/moveto.uchc
+%import entity/tp.uchc
+%import entity/not.uchc
+%import general/particle.uchc
+
+loop fun MainLoop():
+    At()<"@e[tag=projectile]"; <%Particle()<"explosion"; "~ ~ ~">%>>
+    As()<"@e[tag=projectile]"; <%EntityInRadius()<2; <%Kill()<"@s">%>; "tag=!projectile,tag=!raycast,type=!player">%>>
+    As()<"@e[tag=projectile]"; <%EntityInRadius()<2; <%Kill()<"@e[tag=projectile]">%>; "tag=!projectile,type=!player">%>>
+    MoveTo()<"@e[tag=projectile,limit=1,sort=nearest]"; "@e[tag=raycast,limit=1]"; 2.0>
+    NotEntity()<"@e[tag=projectile]"; <%As()<"@p"; <%AtAnchored()<"@s"; <%TpEntity()<"@e[tag=raycast,limit=1]"; "^ ^ ^35">%>>%>>%>>
+MainLoop

@@ -1,0 +1,1861 @@
+{
+  "globalVars": [
+    {
+      "name": "planeCoos1",
+      "value": {
+        "type": "String",
+        "preProcessedValue": "8 -12 -1",
+        "localVarName": null,
+        "isFunctionRawCode": false,
+        "functionInvocation": null
+      }
+    },
+    {
+      "name": "planeCoos2",
+      "value": {
+        "type": "String",
+        "preProcessedValue": "-9 -8 21",
+        "localVarName": null,
+        "isFunctionRawCode": false,
+        "functionInvocation": null
+      }
+    },
+    {
+      "name": "leftArmorStandPos",
+      "value": {
+        "type": "String",
+        "preProcessedValue": "~3 ~2 ~12",
+        "localVarName": null,
+        "isFunctionRawCode": false,
+        "functionInvocation": null
+      }
+    },
+    {
+      "name": "rightArmorStandPos",
+      "value": {
+        "type": "String",
+        "preProcessedValue": "~3 ~2 ~11",
+        "localVarName": null,
+        "isFunctionRawCode": false,
+        "functionInvocation": null
+      }
+    },
+    {
+      "name": "playerPos",
+      "value": {
+        "type": "String",
+        "preProcessedValue": "~3 ~2.0 ~11.5",
+        "localVarName": null,
+        "isFunctionRawCode": false,
+        "functionInvocation": null
+      }
+    },
+    {
+      "name": "distanceRMin",
+      "value": {
+        "type": "Int",
+        "preProcessedValue": "8",
+        "localVarName": null,
+        "isFunctionRawCode": false,
+        "functionInvocation": null
+      }
+    },
+    {
+      "name": "distanceLMax",
+      "value": {
+        "type": "Int",
+        "preProcessedValue": "17",
+        "localVarName": null,
+        "isFunctionRawCode": false,
+        "functionInvocation": null
+      }
+    },
+    {
+      "name": "self",
+      "value": {
+        "type": "CodeBlock",
+        "preProcessedValue": null,
+        "localVarName": "self",
+        "isFunctionRawCode": false,
+        "functionInvocation": {
+          "functionName": "WhileEqual17",
+          "argumentsValues": [],
+          "expressionType": null
+        }
+      }
+    },
+    {
+      "name": "inHandMcId",
+      "value": {
+        "type": "String",
+        "preProcessedValue": "minecraft:sea_pickle",
+        "localVarName": null,
+        "isFunctionRawCode": false,
+        "functionInvocation": null
+      }
+    },
+    {
+      "name": "inHandCallback",
+      "value": {
+        "type": "CodeBlock",
+        "preProcessedValue": null,
+        "localVarName": null,
+        "isFunctionRawCode": true,
+        "functionInvocation": {
+          "functionName": "MoveUp",
+          "argumentsValues": [],
+          "expressionType": null
+        }
+      }
+    },
+    {
+      "name": "stopEventScoreboardName",
+      "value": {
+        "type": "String",
+        "preProcessedValue": "sneaking",
+        "localVarName": null,
+        "isFunctionRawCode": false,
+        "functionInvocation": null
+      }
+    },
+    {
+      "name": "evRegisterScoreboardName",
+      "value": {
+        "type": "String",
+        "preProcessedValue": "carrot_on_a_stick",
+        "localVarName": null,
+        "isFunctionRawCode": false,
+        "functionInvocation": null
+      }
+    },
+    {
+      "name": "evRegisterEvent",
+      "value": {
+        "type": "String",
+        "preProcessedValue": "minecraft.used:minecraft.carrot_on_a_stick",
+        "localVarName": null,
+        "isFunctionRawCode": false,
+        "functionInvocation": null
+      }
+    },
+    {
+      "name": "evRegisterCallback",
+      "value": {
+        "type": "CodeBlock",
+        "preProcessedValue": null,
+        "localVarName": null,
+        "isFunctionRawCode": true,
+        "functionInvocation": {
+          "functionName": "StopAll",
+          "argumentsValues": [],
+          "expressionType": null
+        }
+      }
+    },
+    {
+      "name": "evRunnerScoreboardName",
+      "value": {
+        "type": "GlobalVar",
+        "preProcessedValue": "carrot_on_a_stick",
+        "localVarName": null,
+        "isFunctionRawCode": false,
+        "functionInvocation": null
+      }
+    },
+    {
+      "name": "evRunnerCallback",
+      "value": {
+        "type": "GlobalVar",
+        "preProcessedValue": null,
+        "localVarName": null,
+        "isFunctionRawCode": true,
+        "functionInvocation": {
+          "functionName": "StopAll",
+          "argumentsValues": [],
+          "expressionType": null
+        }
+      }
+    },
+    {
+      "name": "var",
+      "value": {
+        "type": "String",
+        "preProcessedValue": "__sys_stop_carrot_on_a_stick",
+        "localVarName": null,
+        "isFunctionRawCode": false,
+        "functionInvocation": null
+      }
+    },
+    {
+      "name": "value",
+      "value": {
+        "type": "Int",
+        "preProcessedValue": "0",
+        "localVarName": null,
+        "isFunctionRawCode": false,
+        "functionInvocation": null
+      }
+    },
+    {
+      "name": "whileEqualCallback",
+      "value": {
+        "type": "CodeBlock",
+        "preProcessedValue": null,
+        "localVarName": null,
+        "isFunctionRawCode": true,
+        "functionInvocation": {
+          "functionName": "EvRunner17",
+          "argumentsValues": [],
+          "expressionType": null
+        }
+      }
+    }
+  ],
+  "customDefines": [
+    {
+      "functionArguments": [
+        {
+          "name": "pos1",
+          "type": "String"
+        },
+        {
+          "name": "pos2",
+          "type": "String"
+        },
+        {
+          "name": "pos3",
+          "type": "String"
+        }
+      ],
+      "functionName": "CloneBlocks",
+      "functionExpression": "clone ?pos1? ?pos2? ?pos3? replace force"
+    },
+    {
+      "functionArguments": [
+        {
+          "name": "pos1",
+          "type": "String"
+        },
+        {
+          "name": "pos2",
+          "type": "String"
+        },
+        {
+          "name": "blockType",
+          "type": "String"
+        }
+      ],
+      "functionName": "FillBlocks",
+      "functionExpression": "fill ?pos1? ?pos2? ?blockType? replace"
+    },
+    {
+      "functionArguments": [
+        {
+          "name": "at",
+          "type": "String"
+        },
+        {
+          "name": "command",
+          "type": "String"
+        }
+      ],
+      "functionName": "At",
+      "functionExpression": "execute at ?at? run ?command?"
+    },
+    {
+      "functionArguments": [
+        {
+          "name": "at",
+          "type": "String"
+        },
+        {
+          "name": "command",
+          "type": "String"
+        }
+      ],
+      "functionName": "AtAnchored",
+      "functionExpression": "execute at ?at? anchored eyes run ?command?"
+    },
+    {
+      "functionArguments": [
+        {
+          "name": "as",
+          "type": "String"
+        },
+        {
+          "name": "command",
+          "type": "String"
+        }
+      ],
+      "functionName": "As",
+      "functionExpression": "execute as ?as? run ?command?"
+    },
+    {
+      "functionArguments": [
+        {
+          "name": "as",
+          "type": "String"
+        },
+        {
+          "name": "command",
+          "type": "String"
+        }
+      ],
+      "functionName": "AsAt",
+      "functionExpression": "execute as ?as? at @s run ?command?"
+    },
+    {
+      "functionArguments": [
+        {
+          "name": "entitySelector",
+          "type": "String"
+        },
+        {
+          "name": "xyz",
+          "type": "String"
+        }
+      ],
+      "functionName": "TpEntity",
+      "functionExpression": "tp ?entitySelector? ?xyz?"
+    },
+    {
+      "functionArguments": [
+        {
+          "name": "entitySelector",
+          "type": "String"
+        },
+        {
+          "name": "xyz",
+          "type": "String"
+        },
+        {
+          "name": "facingEntity",
+          "type": "String"
+        }
+      ],
+      "functionName": "TpEntityFacing",
+      "functionExpression": "tp ?entitySelector? ?xyz? facing entity ?facingEntity?"
+    },
+    {
+      "functionArguments": [
+        {
+          "name": "maxDistance",
+          "type": "String"
+        },
+        {
+          "name": "command",
+          "type": "String"
+        },
+        {
+          "name": "entitySelector",
+          "type": "String"
+        }
+      ],
+      "functionName": "EntityInRadius",
+      "functionExpression": "execute at @s as @e[distance=..?maxDistance?,?entitySelector?] run ?command?"
+    },
+    {
+      "functionArguments": [
+        {
+          "name": "maxDistance",
+          "type": "String"
+        },
+        {
+          "name": "command",
+          "type": "String"
+        },
+        {
+          "name": "entitySelector",
+          "type": "String"
+        }
+      ],
+      "functionName": "EntityNotInRadius",
+      "functionExpression": "execute at @s unless entity @e[distance=..?maxDistance?,?entitySelector?] run ?command?"
+    },
+    {
+      "functionArguments": [
+        {
+          "name": "entityMcId",
+          "type": "String"
+        },
+        {
+          "name": "xyz",
+          "type": "String"
+        },
+        {
+          "name": "data",
+          "type": "String"
+        }
+      ],
+      "functionName": "SummonData",
+      "functionExpression": "summon ?entityMcId? ?xyz? ?data?"
+    },
+    {
+      "functionArguments": [
+        {
+          "name": "entityMcId",
+          "type": "String"
+        },
+        {
+          "name": "xyz",
+          "type": "String"
+        }
+      ],
+      "functionName": "Summon",
+      "functionExpression": "summon ?entityMcId? ?xyz?"
+    },
+    {
+      "functionArguments": [
+        {
+          "name": "entityMcId",
+          "type": "String"
+        },
+        {
+          "name": "xyz",
+          "type": "String"
+        },
+        {
+          "name": "tag",
+          "type": "String"
+        }
+      ],
+      "functionName": "SummonTag",
+      "functionExpression": "summon ?entityMcId? ?xyz? {Tags:[\u0027?tag?\u0027]}"
+    },
+    {
+      "functionArguments": [
+        {
+          "name": "entity",
+          "type": "String"
+        }
+      ],
+      "functionName": "Kill",
+      "functionExpression": "kill ?entity?"
+    },
+    {
+      "functionArguments": [
+        {
+          "name": "message",
+          "type": "String"
+        }
+      ],
+      "functionName": "Print",
+      "functionExpression": "say ?message?"
+    },
+    {
+      "functionArguments": [
+        {
+          "name": "varName",
+          "type": "String"
+        },
+        {
+          "name": "event",
+          "type": "String"
+        }
+      ],
+      "functionName": "EventRegisterUCHC",
+      "functionExpression": "scoreboard objectives add __sys_event_?varName? ?event?"
+    },
+    {
+      "functionArguments": [
+        {
+          "name": "evName",
+          "type": "String"
+        }
+      ],
+      "functionName": "EvReset",
+      "functionExpression": "scoreboard players reset @a __sys_event_?evName?"
+    },
+    {
+      "functionArguments": [
+        {
+          "name": "command",
+          "type": "String"
+        }
+      ],
+      "functionName": "Execute",
+      "functionExpression": "?command?"
+    }
+  ],
+  "functions": [
+    {
+      "name": "InHand0",
+      "functionArgs": [],
+      "lines": [
+        {
+          "functionName": "As",
+          "argumentsValues": [
+            {
+              "type": "String",
+              "preProcessedValue": "@a[nbt={SelectedItem:{id:\u0027minecraft:pointed_dripstone\u0027}}]",
+              "localVarName": null,
+              "isFunctionRawCode": false,
+              "functionInvocation": null
+            },
+            {
+              "type": "GlobalVar",
+              "preProcessedValue": null,
+              "localVarName": null,
+              "isFunctionRawCode": true,
+              "functionInvocation": {
+                "functionName": "MoveDown",
+                "argumentsValues": [],
+                "expressionType": null
+              }
+            }
+          ],
+          "expressionType": "FunctionInvocationExpression"
+        }
+      ],
+      "isAsCode": false,
+      "flags": null
+    },
+    {
+      "name": "InHand1",
+      "functionArgs": [],
+      "lines": [
+        {
+          "functionName": "As",
+          "argumentsValues": [
+            {
+              "type": "String",
+              "preProcessedValue": "@a[nbt={SelectedItem:{id:\u0027minecraft:sea_pickle\u0027}}]",
+              "localVarName": null,
+              "isFunctionRawCode": false,
+              "functionInvocation": null
+            },
+            {
+              "type": "GlobalVar",
+              "preProcessedValue": null,
+              "localVarName": null,
+              "isFunctionRawCode": true,
+              "functionInvocation": {
+                "functionName": "MoveUp",
+                "argumentsValues": [],
+                "expressionType": null
+              }
+            }
+          ],
+          "expressionType": "FunctionInvocationExpression"
+        }
+      ],
+      "isAsCode": false,
+      "flags": null
+    },
+    {
+      "name": "PlaneEvent",
+      "functionArgs": [],
+      "lines": [
+        {
+          "functionName": "InHand0",
+          "argumentsValues": [],
+          "expressionType": "FunctionInvocationExpression"
+        },
+        {
+          "functionName": "InHand1",
+          "argumentsValues": [],
+          "expressionType": "FunctionInvocationExpression"
+        }
+      ],
+      "isAsCode": false,
+      "flags": []
+    },
+    {
+      "name": "PlaneInit",
+      "functionArgs": [],
+      "lines": [
+        {
+          "functionName": "Kill",
+          "argumentsValues": [
+            {
+              "type": "String",
+              "preProcessedValue": "@e[tag=raycast]",
+              "localVarName": null,
+              "isFunctionRawCode": false,
+              "functionInvocation": null
+            }
+          ],
+          "expressionType": "FunctionInvocationExpression"
+        },
+        {
+          "functionName": "As",
+          "argumentsValues": [
+            {
+              "type": "String",
+              "preProcessedValue": "@p",
+              "localVarName": null,
+              "isFunctionRawCode": false,
+              "functionInvocation": null
+            },
+            {
+              "type": "CodeBlock",
+              "preProcessedValue": null,
+              "localVarName": null,
+              "isFunctionRawCode": true,
+              "functionInvocation": {
+                "functionName": "AtAnchored",
+                "argumentsValues": [
+                  {
+                    "type": "String",
+                    "preProcessedValue": "@s",
+                    "localVarName": null,
+                    "isFunctionRawCode": false,
+                    "functionInvocation": null
+                  },
+                  {
+                    "type": "CodeBlock",
+                    "preProcessedValue": null,
+                    "localVarName": null,
+                    "isFunctionRawCode": true,
+                    "functionInvocation": {
+                      "functionName": "SummonData",
+                      "argumentsValues": [
+                        {
+                          "type": "String",
+                          "preProcessedValue": "armor_stand",
+                          "localVarName": null,
+                          "isFunctionRawCode": false,
+                          "functionInvocation": null
+                        },
+                        {
+                          "type": "String",
+                          "preProcessedValue": "^ ^ ^12",
+                          "localVarName": null,
+                          "isFunctionRawCode": false,
+                          "functionInvocation": null
+                        },
+                        {
+                          "type": "String",
+                          "preProcessedValue": "{Tags:[\u0027raycast\u0027]}",
+                          "localVarName": null,
+                          "isFunctionRawCode": false,
+                          "functionInvocation": null
+                        }
+                      ],
+                      "expressionType": null
+                    }
+                  }
+                ],
+                "expressionType": null
+              }
+            }
+          ],
+          "expressionType": "FunctionInvocationExpression"
+        }
+      ],
+      "isAsCode": false,
+      "flags": []
+    },
+    {
+      "name": "MoveUp",
+      "functionArgs": [],
+      "lines": [
+        {
+          "functionName": "AsAt",
+          "argumentsValues": [
+            {
+              "type": "String",
+              "preProcessedValue": "@e[tag=plane]",
+              "localVarName": null,
+              "isFunctionRawCode": false,
+              "functionInvocation": null
+            },
+            {
+              "type": "CodeBlock",
+              "preProcessedValue": null,
+              "localVarName": null,
+              "isFunctionRawCode": true,
+              "functionInvocation": {
+                "functionName": "TpEntity",
+                "argumentsValues": [
+                  {
+                    "type": "String",
+                    "preProcessedValue": "@s",
+                    "localVarName": null,
+                    "isFunctionRawCode": false,
+                    "functionInvocation": null
+                  },
+                  {
+                    "type": "String",
+                    "preProcessedValue": "~ ~1 ~",
+                    "localVarName": null,
+                    "isFunctionRawCode": false,
+                    "functionInvocation": null
+                  }
+                ],
+                "expressionType": null
+              }
+            }
+          ],
+          "expressionType": "FunctionInvocationExpression"
+        }
+      ],
+      "isAsCode": false,
+      "flags": []
+    },
+    {
+      "name": "MoveDown",
+      "functionArgs": [],
+      "lines": [
+        {
+          "functionName": "AsAt",
+          "argumentsValues": [
+            {
+              "type": "String",
+              "preProcessedValue": "@e[tag=plane]",
+              "localVarName": null,
+              "isFunctionRawCode": false,
+              "functionInvocation": null
+            },
+            {
+              "type": "CodeBlock",
+              "preProcessedValue": null,
+              "localVarName": null,
+              "isFunctionRawCode": true,
+              "functionInvocation": {
+                "functionName": "TpEntity",
+                "argumentsValues": [
+                  {
+                    "type": "String",
+                    "preProcessedValue": "@s",
+                    "localVarName": null,
+                    "isFunctionRawCode": false,
+                    "functionInvocation": null
+                  },
+                  {
+                    "type": "String",
+                    "preProcessedValue": "~ ~-1 ~",
+                    "localVarName": null,
+                    "isFunctionRawCode": false,
+                    "functionInvocation": null
+                  }
+                ],
+                "expressionType": null
+              }
+            }
+          ],
+          "expressionType": "FunctionInvocationExpression"
+        }
+      ],
+      "isAsCode": false,
+      "flags": []
+    },
+    {
+      "name": "MoveLeft",
+      "functionArgs": [],
+      "lines": [
+        {
+          "functionName": "AsAt",
+          "argumentsValues": [
+            {
+              "type": "String",
+              "preProcessedValue": "@e[tag=plane]",
+              "localVarName": null,
+              "isFunctionRawCode": false,
+              "functionInvocation": null
+            },
+            {
+              "type": "CodeBlock",
+              "preProcessedValue": null,
+              "localVarName": null,
+              "isFunctionRawCode": true,
+              "functionInvocation": {
+                "functionName": "TpEntity",
+                "argumentsValues": [
+                  {
+                    "type": "String",
+                    "preProcessedValue": "@s",
+                    "localVarName": null,
+                    "isFunctionRawCode": false,
+                    "functionInvocation": null
+                  },
+                  {
+                    "type": "String",
+                    "preProcessedValue": "~ ~ ~-1",
+                    "localVarName": null,
+                    "isFunctionRawCode": false,
+                    "functionInvocation": null
+                  }
+                ],
+                "expressionType": null
+              }
+            }
+          ],
+          "expressionType": "FunctionInvocationExpression"
+        }
+      ],
+      "isAsCode": false,
+      "flags": []
+    },
+    {
+      "name": "MoveRight",
+      "functionArgs": [],
+      "lines": [
+        {
+          "functionName": "AsAt",
+          "argumentsValues": [
+            {
+              "type": "String",
+              "preProcessedValue": "@e[tag=plane]",
+              "localVarName": null,
+              "isFunctionRawCode": false,
+              "functionInvocation": null
+            },
+            {
+              "type": "CodeBlock",
+              "preProcessedValue": null,
+              "localVarName": null,
+              "isFunctionRawCode": true,
+              "functionInvocation": {
+                "functionName": "TpEntity",
+                "argumentsValues": [
+                  {
+                    "type": "String",
+                    "preProcessedValue": "@s",
+                    "localVarName": null,
+                    "isFunctionRawCode": false,
+                    "functionInvocation": null
+                  },
+                  {
+                    "type": "String",
+                    "preProcessedValue": "~ ~ ~1",
+                    "localVarName": null,
+                    "isFunctionRawCode": false,
+                    "functionInvocation": null
+                  }
+                ],
+                "expressionType": null
+              }
+            }
+          ],
+          "expressionType": "FunctionInvocationExpression"
+        }
+      ],
+      "isAsCode": false,
+      "flags": []
+    },
+    {
+      "name": "RaycastLoop",
+      "functionArgs": [],
+      "lines": [
+        {
+          "functionName": "As",
+          "argumentsValues": [
+            {
+              "type": "String",
+              "preProcessedValue": "@p",
+              "localVarName": null,
+              "isFunctionRawCode": false,
+              "functionInvocation": null
+            },
+            {
+              "type": "CodeBlock",
+              "preProcessedValue": null,
+              "localVarName": null,
+              "isFunctionRawCode": true,
+              "functionInvocation": {
+                "functionName": "AtAnchored",
+                "argumentsValues": [
+                  {
+                    "type": "String",
+                    "preProcessedValue": "@s",
+                    "localVarName": null,
+                    "isFunctionRawCode": false,
+                    "functionInvocation": null
+                  },
+                  {
+                    "type": "CodeBlock",
+                    "preProcessedValue": null,
+                    "localVarName": null,
+                    "isFunctionRawCode": true,
+                    "functionInvocation": {
+                      "functionName": "TpEntity",
+                      "argumentsValues": [
+                        {
+                          "type": "String",
+                          "preProcessedValue": "@e[tag=raycast,limit=1]",
+                          "localVarName": null,
+                          "isFunctionRawCode": false,
+                          "functionInvocation": null
+                        },
+                        {
+                          "type": "String",
+                          "preProcessedValue": "^ ^ ^12",
+                          "localVarName": null,
+                          "isFunctionRawCode": false,
+                          "functionInvocation": null
+                        }
+                      ],
+                      "expressionType": null
+                    }
+                  }
+                ],
+                "expressionType": null
+              }
+            }
+          ],
+          "expressionType": "FunctionInvocationExpression"
+        }
+      ],
+      "isAsCode": false,
+      "flags": [
+        "loop"
+      ]
+    },
+    {
+      "name": "CopyPlane",
+      "functionArgs": [],
+      "lines": [
+        {
+          "functionName": "AsAt",
+          "argumentsValues": [
+            {
+              "type": "String",
+              "preProcessedValue": "@e[tag=plane]",
+              "localVarName": null,
+              "isFunctionRawCode": false,
+              "functionInvocation": null
+            },
+            {
+              "type": "CodeBlock",
+              "preProcessedValue": null,
+              "localVarName": null,
+              "isFunctionRawCode": true,
+              "functionInvocation": {
+                "functionName": "EntityInRadius",
+                "argumentsValues": [
+                  {
+                    "type": "Int",
+                    "preProcessedValue": "20",
+                    "localVarName": null,
+                    "isFunctionRawCode": false,
+                    "functionInvocation": null
+                  },
+                  {
+                    "type": "CodeBlock",
+                    "preProcessedValue": null,
+                    "localVarName": null,
+                    "isFunctionRawCode": true,
+                    "functionInvocation": {
+                      "functionName": "At",
+                      "argumentsValues": [
+                        {
+                          "type": "String",
+                          "preProcessedValue": "@s",
+                          "localVarName": null,
+                          "isFunctionRawCode": false,
+                          "functionInvocation": null
+                        },
+                        {
+                          "type": "CodeBlock",
+                          "preProcessedValue": null,
+                          "localVarName": null,
+                          "isFunctionRawCode": true,
+                          "functionInvocation": {
+                            "functionName": "TpEntity",
+                            "argumentsValues": [
+                              {
+                                "type": "String",
+                                "preProcessedValue": "@s",
+                                "localVarName": null,
+                                "isFunctionRawCode": false,
+                                "functionInvocation": null
+                              },
+                              {
+                                "type": "String",
+                                "preProcessedValue": "~-2 ~ ~",
+                                "localVarName": null,
+                                "isFunctionRawCode": false,
+                                "functionInvocation": null
+                              }
+                            ],
+                            "expressionType": null
+                          }
+                        }
+                      ],
+                      "expressionType": null
+                    }
+                  },
+                  {
+                    "type": "String",
+                    "preProcessedValue": "type=!player,tag=!lpos,tag=!rpos",
+                    "localVarName": null,
+                    "isFunctionRawCode": false,
+                    "functionInvocation": null
+                  }
+                ],
+                "expressionType": null
+              }
+            }
+          ],
+          "expressionType": "FunctionInvocationExpression"
+        },
+        {
+          "functionName": "AsAt",
+          "argumentsValues": [
+            {
+              "type": "String",
+              "preProcessedValue": "@e[tag=plane]",
+              "localVarName": null,
+              "isFunctionRawCode": false,
+              "functionInvocation": null
+            },
+            {
+              "type": "CodeBlock",
+              "preProcessedValue": null,
+              "localVarName": null,
+              "isFunctionRawCode": true,
+              "functionInvocation": {
+                "functionName": "EntityInRadius",
+                "argumentsValues": [
+                  {
+                    "type": "Int",
+                    "preProcessedValue": "20",
+                    "localVarName": null,
+                    "isFunctionRawCode": false,
+                    "functionInvocation": null
+                  },
+                  {
+                    "type": "CodeBlock",
+                    "preProcessedValue": null,
+                    "localVarName": null,
+                    "isFunctionRawCode": true,
+                    "functionInvocation": {
+                      "functionName": "TpEntity",
+                      "argumentsValues": [
+                        {
+                          "type": "String",
+                          "preProcessedValue": "@s",
+                          "localVarName": null,
+                          "isFunctionRawCode": false,
+                          "functionInvocation": null
+                        },
+                        {
+                          "type": "GlobalVar",
+                          "preProcessedValue": "~3 ~2.0 ~11.5",
+                          "localVarName": null,
+                          "isFunctionRawCode": false,
+                          "functionInvocation": null
+                        }
+                      ],
+                      "expressionType": null
+                    }
+                  },
+                  {
+                    "type": "String",
+                    "preProcessedValue": "type=player",
+                    "localVarName": null,
+                    "isFunctionRawCode": false,
+                    "functionInvocation": null
+                  }
+                ],
+                "expressionType": null
+              }
+            }
+          ],
+          "expressionType": "FunctionInvocationExpression"
+        },
+        {
+          "functionName": "As",
+          "argumentsValues": [
+            {
+              "type": "String",
+              "preProcessedValue": "@e[tag=plane]",
+              "localVarName": null,
+              "isFunctionRawCode": false,
+              "functionInvocation": null
+            },
+            {
+              "type": "CodeBlock",
+              "preProcessedValue": null,
+              "localVarName": null,
+              "isFunctionRawCode": true,
+              "functionInvocation": {
+                "functionName": "EntityInRadius",
+                "argumentsValues": [
+                  {
+                    "type": "GlobalVar",
+                    "preProcessedValue": "8",
+                    "localVarName": null,
+                    "isFunctionRawCode": false,
+                    "functionInvocation": null
+                  },
+                  {
+                    "type": "CodeBlock",
+                    "preProcessedValue": null,
+                    "localVarName": null,
+                    "isFunctionRawCode": true,
+                    "functionInvocation": {
+                      "functionName": "MoveLeft",
+                      "argumentsValues": [],
+                      "expressionType": null
+                    }
+                  },
+                  {
+                    "type": "String",
+                    "preProcessedValue": "tag=raycast",
+                    "localVarName": null,
+                    "isFunctionRawCode": false,
+                    "functionInvocation": null
+                  }
+                ],
+                "expressionType": null
+              }
+            }
+          ],
+          "expressionType": "FunctionInvocationExpression"
+        },
+        {
+          "functionName": "As",
+          "argumentsValues": [
+            {
+              "type": "String",
+              "preProcessedValue": "@e[tag=plane]",
+              "localVarName": null,
+              "isFunctionRawCode": false,
+              "functionInvocation": null
+            },
+            {
+              "type": "CodeBlock",
+              "preProcessedValue": null,
+              "localVarName": null,
+              "isFunctionRawCode": true,
+              "functionInvocation": {
+                "functionName": "EntityNotInRadius",
+                "argumentsValues": [
+                  {
+                    "type": "GlobalVar",
+                    "preProcessedValue": "17",
+                    "localVarName": null,
+                    "isFunctionRawCode": false,
+                    "functionInvocation": null
+                  },
+                  {
+                    "type": "CodeBlock",
+                    "preProcessedValue": null,
+                    "localVarName": null,
+                    "isFunctionRawCode": true,
+                    "functionInvocation": {
+                      "functionName": "MoveRight",
+                      "argumentsValues": [],
+                      "expressionType": null
+                    }
+                  },
+                  {
+                    "type": "String",
+                    "preProcessedValue": "tag=raycast",
+                    "localVarName": null,
+                    "isFunctionRawCode": false,
+                    "functionInvocation": null
+                  }
+                ],
+                "expressionType": null
+              }
+            }
+          ],
+          "expressionType": "FunctionInvocationExpression"
+        },
+        {
+          "functionName": "At",
+          "argumentsValues": [
+            {
+              "type": "String",
+              "preProcessedValue": "@e[tag=plane]",
+              "localVarName": null,
+              "isFunctionRawCode": false,
+              "functionInvocation": null
+            },
+            {
+              "type": "CodeBlock",
+              "preProcessedValue": null,
+              "localVarName": null,
+              "isFunctionRawCode": true,
+              "functionInvocation": {
+                "functionName": "FillBlocks",
+                "argumentsValues": [
+                  {
+                    "type": "String",
+                    "preProcessedValue": "~ ~ ~",
+                    "localVarName": null,
+                    "isFunctionRawCode": false,
+                    "functionInvocation": null
+                  },
+                  {
+                    "type": "String",
+                    "preProcessedValue": "~17 ~4 ~22",
+                    "localVarName": null,
+                    "isFunctionRawCode": false,
+                    "functionInvocation": null
+                  },
+                  {
+                    "type": "String",
+                    "preProcessedValue": "air",
+                    "localVarName": null,
+                    "isFunctionRawCode": false,
+                    "functionInvocation": null
+                  }
+                ],
+                "expressionType": null
+              }
+            }
+          ],
+          "expressionType": "FunctionInvocationExpression"
+        },
+        {
+          "functionName": "At",
+          "argumentsValues": [
+            {
+              "type": "String",
+              "preProcessedValue": "@e[tag=plane]",
+              "localVarName": null,
+              "isFunctionRawCode": false,
+              "functionInvocation": null
+            },
+            {
+              "type": "CodeBlock",
+              "preProcessedValue": null,
+              "localVarName": null,
+              "isFunctionRawCode": true,
+              "functionInvocation": {
+                "functionName": "CloneBlocks",
+                "argumentsValues": [
+                  {
+                    "type": "GlobalVar",
+                    "preProcessedValue": "8 -12 -1",
+                    "localVarName": null,
+                    "isFunctionRawCode": false,
+                    "functionInvocation": null
+                  },
+                  {
+                    "type": "GlobalVar",
+                    "preProcessedValue": "-9 -8 21",
+                    "localVarName": null,
+                    "isFunctionRawCode": false,
+                    "functionInvocation": null
+                  },
+                  {
+                    "type": "String",
+                    "preProcessedValue": "~ ~ ~",
+                    "localVarName": null,
+                    "isFunctionRawCode": false,
+                    "functionInvocation": null
+                  }
+                ],
+                "expressionType": null
+              }
+            }
+          ],
+          "expressionType": "FunctionInvocationExpression"
+        }
+      ],
+      "isAsCode": false,
+      "flags": []
+    },
+    {
+      "name": "StopEvent10",
+      "functionArgs": [],
+      "lines": [
+        {
+          "variableName": "__sys_stop_sneaking",
+          "functionName": "Set",
+          "argumentCount": 1,
+          "expressionType": "VariableModificationExpression"
+        }
+      ],
+      "isAsCode": false,
+      "flags": null
+    },
+    {
+      "name": "StopAll",
+      "functionArgs": [],
+      "lines": [
+        {
+          "variableName": "stop",
+          "functionName": "Set",
+          "argumentCount": 1,
+          "expressionType": "VariableModificationExpression"
+        },
+        {
+          "functionName": "StopEvent10",
+          "argumentsValues": [],
+          "expressionType": "FunctionInvocationExpression"
+        }
+      ],
+      "isAsCode": false,
+      "flags": []
+    },
+    {
+      "name": "MainL",
+      "functionArgs": [],
+      "lines": [
+        {
+          "condition": {
+            "firstValue": {
+              "type": "LocalVar",
+              "preProcessedValue": null,
+              "localVarName": "stop",
+              "isFunctionRawCode": false,
+              "functionInvocation": null
+            },
+            "conditionSymbol": "=",
+            "secondValue": {
+              "type": "Int",
+              "preProcessedValue": "0",
+              "localVarName": null,
+              "isFunctionRawCode": false,
+              "functionInvocation": null
+            }
+          },
+          "functionInvocation": {
+            "functionName": "As",
+            "argumentsValues": [
+              {
+                "type": "String",
+                "preProcessedValue": "@e[tag=plane]",
+                "localVarName": null,
+                "isFunctionRawCode": false,
+                "functionInvocation": null
+              },
+              {
+                "type": "CodeBlock",
+                "preProcessedValue": null,
+                "localVarName": null,
+                "isFunctionRawCode": true,
+                "functionInvocation": {
+                  "functionName": "CopyPlane",
+                  "argumentsValues": [],
+                  "expressionType": null
+                }
+              }
+            ],
+            "expressionType": null
+          },
+          "expressionType": "IfExpression"
+        }
+      ],
+      "isAsCode": false,
+      "flags": [
+        "loop"
+      ]
+    },
+    {
+      "name": "EvRunner13",
+      "functionArgs": [],
+      "lines": [
+        {
+          "functionName": "As",
+          "argumentsValues": [
+            {
+              "type": "String",
+              "preProcessedValue": "@a[scores={__sys_event_sneaking=1..}]",
+              "localVarName": null,
+              "isFunctionRawCode": false,
+              "functionInvocation": null
+            },
+            {
+              "type": "GlobalVar",
+              "preProcessedValue": null,
+              "localVarName": null,
+              "isFunctionRawCode": true,
+              "functionInvocation": {
+                "functionName": "PlaneEvent",
+                "argumentsValues": [],
+                "expressionType": null
+              }
+            }
+          ],
+          "expressionType": "FunctionInvocationExpression"
+        },
+        {
+          "functionName": "As",
+          "argumentsValues": [
+            {
+              "type": "String",
+              "preProcessedValue": "@a[scores={__sys_event_sneaking=1..}]",
+              "localVarName": null,
+              "isFunctionRawCode": false,
+              "functionInvocation": null
+            },
+            {
+              "type": "CodeBlock",
+              "preProcessedValue": null,
+              "localVarName": null,
+              "isFunctionRawCode": true,
+              "functionInvocation": {
+                "functionName": "EvReset",
+                "argumentsValues": [
+                  {
+                    "type": "GlobalVar",
+                    "preProcessedValue": "sneaking",
+                    "localVarName": null,
+                    "isFunctionRawCode": false,
+                    "functionInvocation": null
+                  }
+                ],
+                "expressionType": null
+              }
+            }
+          ],
+          "expressionType": "FunctionInvocationExpression"
+        }
+      ],
+      "isAsCode": false,
+      "flags": null
+    },
+    {
+      "name": "WhileEqual14",
+      "functionArgs": [],
+      "lines": [
+        {
+          "condition": {
+            "firstValue": {
+              "type": "LocalVar",
+              "preProcessedValue": null,
+              "localVarName": "__sys_stop_sneaking",
+              "isFunctionRawCode": false,
+              "functionInvocation": null
+            },
+            "conditionSymbol": "=",
+            "secondValue": {
+              "type": "GlobalVar",
+              "preProcessedValue": "0",
+              "localVarName": null,
+              "isFunctionRawCode": false,
+              "functionInvocation": null
+            }
+          },
+          "functionInvocation": {
+            "functionName": "Execute",
+            "argumentsValues": [
+              {
+                "type": "GlobalVar",
+                "preProcessedValue": null,
+                "localVarName": null,
+                "isFunctionRawCode": true,
+                "functionInvocation": {
+                  "functionName": "EvRunner13",
+                  "argumentsValues": [],
+                  "expressionType": null
+                }
+              }
+            ],
+            "expressionType": null
+          },
+          "expressionType": "IfExpression"
+        },
+        {
+          "condition": {
+            "firstValue": {
+              "type": "LocalVar",
+              "preProcessedValue": null,
+              "localVarName": "__sys_stop_sneaking",
+              "isFunctionRawCode": false,
+              "functionInvocation": null
+            },
+            "conditionSymbol": "=",
+            "secondValue": {
+              "type": "GlobalVar",
+              "preProcessedValue": "0",
+              "localVarName": null,
+              "isFunctionRawCode": false,
+              "functionInvocation": null
+            }
+          },
+          "functionInvocation": {
+            "functionName": "Execute",
+            "argumentsValues": [
+              {
+                "type": "GlobalVar",
+                "preProcessedValue": null,
+                "localVarName": null,
+                "isFunctionRawCode": false,
+                "functionInvocation": {
+                  "functionName": "WhileEqual14",
+                  "argumentsValues": [],
+                  "expressionType": null
+                }
+              }
+            ],
+            "expressionType": null
+          },
+          "expressionType": "IfExpression"
+        }
+      ],
+      "isAsCode": false,
+      "flags": null
+    },
+    {
+      "name": "EvRegister13",
+      "functionArgs": [],
+      "lines": [
+        {
+          "initialValue": {
+            "type": "Int",
+            "preProcessedValue": "0",
+            "localVarName": null,
+            "isFunctionRawCode": false,
+            "functionInvocation": null
+          },
+          "type": "Int",
+          "name": "__sys_stop_sneaking",
+          "expressionType": "LocalVariableExpression"
+        },
+        {
+          "functionName": "EventRegisterUCHC",
+          "argumentsValues": [
+            {
+              "type": "GlobalVar",
+              "preProcessedValue": "sneaking",
+              "localVarName": null,
+              "isFunctionRawCode": false,
+              "functionInvocation": null
+            },
+            {
+              "type": "GlobalVar",
+              "preProcessedValue": "minecraft.custom:minecraft.sneak_time",
+              "localVarName": null,
+              "isFunctionRawCode": false,
+              "functionInvocation": null
+            }
+          ],
+          "expressionType": "FunctionInvocationExpression"
+        },
+        {
+          "functionName": "WhileEqual14",
+          "argumentsValues": [],
+          "expressionType": "FunctionInvocationExpression"
+        }
+      ],
+      "isAsCode": false,
+      "flags": null
+    },
+    {
+      "name": "EvRunner16",
+      "functionArgs": [],
+      "lines": [
+        {
+          "functionName": "As",
+          "argumentsValues": [
+            {
+              "type": "String",
+              "preProcessedValue": "@a[scores={__sys_event_carrot_on_a_stick=1..}]",
+              "localVarName": null,
+              "isFunctionRawCode": false,
+              "functionInvocation": null
+            },
+            {
+              "type": "GlobalVar",
+              "preProcessedValue": null,
+              "localVarName": null,
+              "isFunctionRawCode": true,
+              "functionInvocation": {
+                "functionName": "StopAll",
+                "argumentsValues": [],
+                "expressionType": null
+              }
+            }
+          ],
+          "expressionType": "FunctionInvocationExpression"
+        },
+        {
+          "functionName": "As",
+          "argumentsValues": [
+            {
+              "type": "String",
+              "preProcessedValue": "@a[scores={__sys_event_carrot_on_a_stick=1..}]",
+              "localVarName": null,
+              "isFunctionRawCode": false,
+              "functionInvocation": null
+            },
+            {
+              "type": "CodeBlock",
+              "preProcessedValue": null,
+              "localVarName": null,
+              "isFunctionRawCode": true,
+              "functionInvocation": {
+                "functionName": "EvReset",
+                "argumentsValues": [
+                  {
+                    "type": "GlobalVar",
+                    "preProcessedValue": "carrot_on_a_stick",
+                    "localVarName": null,
+                    "isFunctionRawCode": false,
+                    "functionInvocation": null
+                  }
+                ],
+                "expressionType": null
+              }
+            }
+          ],
+          "expressionType": "FunctionInvocationExpression"
+        }
+      ],
+      "isAsCode": false,
+      "flags": null
+    },
+    {
+      "name": "EvRunner17",
+      "functionArgs": [],
+      "lines": [
+        {
+          "functionName": "As",
+          "argumentsValues": [
+            {
+              "type": "String",
+              "preProcessedValue": "@a[scores={__sys_event_carrot_on_a_stick=1..}]",
+              "localVarName": null,
+              "isFunctionRawCode": false,
+              "functionInvocation": null
+            },
+            {
+              "type": "GlobalVar",
+              "preProcessedValue": null,
+              "localVarName": null,
+              "isFunctionRawCode": true,
+              "functionInvocation": {
+                "functionName": "StopAll",
+                "argumentsValues": [],
+                "expressionType": null
+              }
+            }
+          ],
+          "expressionType": "FunctionInvocationExpression"
+        },
+        {
+          "functionName": "As",
+          "argumentsValues": [
+            {
+              "type": "String",
+              "preProcessedValue": "@a[scores={__sys_event_carrot_on_a_stick=1..}]",
+              "localVarName": null,
+              "isFunctionRawCode": false,
+              "functionInvocation": null
+            },
+            {
+              "type": "CodeBlock",
+              "preProcessedValue": null,
+              "localVarName": null,
+              "isFunctionRawCode": true,
+              "functionInvocation": {
+                "functionName": "EvReset",
+                "argumentsValues": [
+                  {
+                    "type": "GlobalVar",
+                    "preProcessedValue": "carrot_on_a_stick",
+                    "localVarName": null,
+                    "isFunctionRawCode": false,
+                    "functionInvocation": null
+                  }
+                ],
+                "expressionType": null
+              }
+            }
+          ],
+          "expressionType": "FunctionInvocationExpression"
+        }
+      ],
+      "isAsCode": false,
+      "flags": null
+    },
+    {
+      "name": "WhileEqual17",
+      "functionArgs": [],
+      "lines": [
+        {
+          "condition": {
+            "firstValue": {
+              "type": "LocalVar",
+              "preProcessedValue": null,
+              "localVarName": "__sys_stop_carrot_on_a_stick",
+              "isFunctionRawCode": false,
+              "functionInvocation": null
+            },
+            "conditionSymbol": "=",
+            "secondValue": {
+              "type": "GlobalVar",
+              "preProcessedValue": "0",
+              "localVarName": null,
+              "isFunctionRawCode": false,
+              "functionInvocation": null
+            }
+          },
+          "functionInvocation": {
+            "functionName": "Execute",
+            "argumentsValues": [
+              {
+                "type": "GlobalVar",
+                "preProcessedValue": null,
+                "localVarName": null,
+                "isFunctionRawCode": true,
+                "functionInvocation": {
+                  "functionName": "EvRunner17",
+                  "argumentsValues": [],
+                  "expressionType": null
+                }
+              }
+            ],
+            "expressionType": null
+          },
+          "expressionType": "IfExpression"
+        },
+        {
+          "condition": {
+            "firstValue": {
+              "type": "LocalVar",
+              "preProcessedValue": null,
+              "localVarName": "__sys_stop_carrot_on_a_stick",
+              "isFunctionRawCode": false,
+              "functionInvocation": null
+            },
+            "conditionSymbol": "=",
+            "secondValue": {
+              "type": "GlobalVar",
+              "preProcessedValue": "0",
+              "localVarName": null,
+              "isFunctionRawCode": false,
+              "functionInvocation": null
+            }
+          },
+          "functionInvocation": {
+            "functionName": "Execute",
+            "argumentsValues": [
+              {
+                "type": "GlobalVar",
+                "preProcessedValue": null,
+                "localVarName": null,
+                "isFunctionRawCode": false,
+                "functionInvocation": {
+                  "functionName": "WhileEqual17",
+                  "argumentsValues": [],
+                  "expressionType": null
+                }
+              }
+            ],
+            "expressionType": null
+          },
+          "expressionType": "IfExpression"
+        }
+      ],
+      "isAsCode": false,
+      "flags": null
+    },
+    {
+      "name": "EvRegister16",
+      "functionArgs": [],
+      "lines": [
+        {
+          "initialValue": {
+            "type": "Int",
+            "preProcessedValue": "0",
+            "localVarName": null,
+            "isFunctionRawCode": false,
+            "functionInvocation": null
+          },
+          "type": "Int",
+          "name": "__sys_stop_carrot_on_a_stick",
+          "expressionType": "LocalVariableExpression"
+        },
+        {
+          "functionName": "EventRegisterUCHC",
+          "argumentsValues": [
+            {
+              "type": "GlobalVar",
+              "preProcessedValue": "carrot_on_a_stick",
+              "localVarName": null,
+              "isFunctionRawCode": false,
+              "functionInvocation": null
+            },
+            {
+              "type": "GlobalVar",
+              "preProcessedValue": "minecraft.used:minecraft.carrot_on_a_stick",
+              "localVarName": null,
+              "isFunctionRawCode": false,
+              "functionInvocation": null
+            }
+          ],
+          "expressionType": "FunctionInvocationExpression"
+        },
+        {
+          "functionName": "WhileEqual17",
+          "argumentsValues": [],
+          "expressionType": "FunctionInvocationExpression"
+        }
+      ],
+      "isAsCode": false,
+      "flags": null
+    },
+    {
+      "name": "Main",
+      "functionArgs": [],
+      "lines": [
+        {
+          "initialValue": {
+            "type": "Int",
+            "preProcessedValue": "0",
+            "localVarName": null,
+            "isFunctionRawCode": false,
+            "functionInvocation": null
+          },
+          "type": "Int",
+          "name": "stop",
+          "expressionType": "LocalVariableExpression"
+        },
+        {
+          "functionName": "EvRegister13",
+          "argumentsValues": [],
+          "expressionType": "FunctionInvocationExpression"
+        },
+        {
+          "functionName": "EvRegister16",
+          "argumentsValues": [],
+          "expressionType": "FunctionInvocationExpression"
+        },
+        {
+          "functionName": "PlaneInit",
+          "argumentsValues": [],
+          "expressionType": "FunctionInvocationExpression"
+        }
+      ],
+      "isAsCode": false,
+      "flags": []
+    }
+  ],
+  "localVariables": [
+    {
+      "initialValue": {
+        "type": "Int",
+        "preProcessedValue": "0",
+        "localVarName": null,
+        "isFunctionRawCode": false,
+        "functionInvocation": null
+      },
+      "type": "Int",
+      "name": "stop",
+      "expressionType": "LocalVariableExpression"
+    },
+    {
+      "initialValue": {
+        "type": "Int",
+        "preProcessedValue": "0",
+        "localVarName": null,
+        "isFunctionRawCode": false,
+        "functionInvocation": null
+      },
+      "type": "Int",
+      "name": "__sys_stop_sneaking",
+      "expressionType": "LocalVariableExpression"
+    },
+    {
+      "initialValue": {
+        "type": "Int",
+        "preProcessedValue": "0",
+        "localVarName": null,
+        "isFunctionRawCode": false,
+        "functionInvocation": null
+      },
+      "type": "Int",
+      "name": "__sys_stop_carrot_on_a_stick",
+      "expressionType": "LocalVariableExpression"
+    }
+  ]
+}

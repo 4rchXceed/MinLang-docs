@@ -1,0 +1,2 @@
+// Simple run a command
+[Execute(String command;)] => <?command?>

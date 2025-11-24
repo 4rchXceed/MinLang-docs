@@ -1,0 +1,6 @@
+// Wrapper for /tag
+// Add
+[AddTag(String entity; String tag;)] => <tag ?entity? add ?tag?>
+
+// Remove
+[RemoveTag(String entity; String tag;)] => <tag ?entity? remove ?tag?>

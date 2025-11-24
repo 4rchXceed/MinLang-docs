@@ -1,0 +1,6 @@
+%import execute.uchc
+
+ascode fun WhileLt(String var; Int value; String whileLtCallback;):
+    If (#::{$::var} < $::value): Execute()<$::whileLtCallback>
+    If (#::{$::var} < $::value): Execute()<$::self>
+WhileLt

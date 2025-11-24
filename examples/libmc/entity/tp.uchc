@@ -1,0 +1,5 @@
+// TP (source, x, y, z)
+[TpEntity(String entitySelector; String xyz;)] => <tp ?entitySelector? ?xyz?>
+
+// TP (With facing)
+[TpEntityFacing(String entitySelector; String xyz; String facingEntity;)] => <tp ?entitySelector? ?xyz? facing entity ?facingEntity?>

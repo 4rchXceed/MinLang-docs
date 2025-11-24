@@ -1,0 +1,2 @@
+// Kill
+[Kill(String entity;)] => <kill ?entity?>

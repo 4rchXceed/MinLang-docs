@@ -1,0 +1,20 @@
+%import plane.ucl
+%import executeas.uchc
+%import events/event.ucl
+%import events/stop.ucl
+
+fun StopAll():
+    #::stop::Set()<1>
+    StopEvent()<"sneaking">
+StopAll
+
+loop fun MainL():
+    If (#::stop = 0): As()<"@e[tag=plane]"; <%CopyPlane()<>%>>
+MainL
+
+fun Main():
+    Int stop = 0
+    EvRegister()<"sneaking"; "minecraft.custom:minecraft.sneak_time"; <%PlaneEvent()<>%>>
+    EvRegister()<"carrot_on_a_stick"; "minecraft.used:minecraft.carrot_on_a_stick"; <%StopAll()<>%>>
+    PlaneInit()<>
+Main

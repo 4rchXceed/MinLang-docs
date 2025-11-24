@@ -1,0 +1,1484 @@
+{
+  "globalVars": [
+    {
+      "name": "armorStand",
+      "value": {
+        "type": "String",
+        "preProcessedValue": "@e[type=armor_stand]",
+        "localVarName": null,
+        "isFunctionRawCode": false,
+        "functionInvocation": null
+      }
+    },
+    {
+      "name": "notFireBall",
+      "value": {
+        "type": "String",
+        "preProcessedValue": "tag=!FireBall",
+        "localVarName": null,
+        "isFunctionRawCode": false,
+        "functionInvocation": null
+      }
+    },
+    {
+      "name": "canFireWhenMaxDistance",
+      "value": {
+        "type": "Int",
+        "preProcessedValue": "100",
+        "localVarName": null,
+        "isFunctionRawCode": false,
+        "functionInvocation": null
+      }
+    },
+    {
+      "name": "self",
+      "value": {
+        "type": "CodeBlock",
+        "preProcessedValue": null,
+        "localVarName": "self",
+        "isFunctionRawCode": false,
+        "functionInvocation": {
+          "functionName": "WhileEqual9",
+          "argumentsValues": [],
+          "expressionType": null
+        }
+      }
+    },
+    {
+      "name": "inInventoryMcId",
+      "value": {
+        "type": "String",
+        "preProcessedValue": "minecraft:iron_nugget",
+        "localVarName": null,
+        "isFunctionRawCode": false,
+        "functionInvocation": null
+      }
+    },
+    {
+      "name": "inInventoryCallback",
+      "value": {
+        "type": "CodeBlock",
+        "preProcessedValue": null,
+        "localVarName": null,
+        "isFunctionRawCode": true,
+        "functionInvocation": {
+          "functionName": "ReplaceItem",
+          "argumentsValues": [
+            {
+              "type": "String",
+              "preProcessedValue": "@p",
+              "localVarName": null,
+              "isFunctionRawCode": false,
+              "functionInvocation": null
+            },
+            {
+              "type": "String",
+              "preProcessedValue": "crossbow[charged_projectiles=[{id:\u0027minecraft:arrow\u0027,count:1}]]",
+              "localVarName": null,
+              "isFunctionRawCode": false,
+              "functionInvocation": null
+            }
+          ],
+          "expressionType": null
+        }
+      }
+    },
+    {
+      "name": "inHandMcId",
+      "value": {
+        "type": "String",
+        "preProcessedValue": "minecraft:crossbow",
+        "localVarName": null,
+        "isFunctionRawCode": false,
+        "functionInvocation": null
+      }
+    },
+    {
+      "name": "inHandCallback",
+      "value": {
+        "type": "CodeBlock",
+        "preProcessedValue": null,
+        "localVarName": null,
+        "isFunctionRawCode": true,
+        "functionInvocation": {
+          "functionName": "InInventory5",
+          "argumentsValues": [],
+          "expressionType": null
+        }
+      }
+    },
+    {
+      "name": "evRegisterScoreboardName",
+      "value": {
+        "type": "String",
+        "preProcessedValue": "sneaking",
+        "localVarName": null,
+        "isFunctionRawCode": false,
+        "functionInvocation": null
+      }
+    },
+    {
+      "name": "evRegisterEvent",
+      "value": {
+        "type": "String",
+        "preProcessedValue": "minecraft.custom:minecraft.sneak_time",
+        "localVarName": null,
+        "isFunctionRawCode": false,
+        "functionInvocation": null
+      }
+    },
+    {
+      "name": "evRegisterCallback",
+      "value": {
+        "type": "CodeBlock",
+        "preProcessedValue": null,
+        "localVarName": null,
+        "isFunctionRawCode": true,
+        "functionInvocation": {
+          "functionName": "At",
+          "argumentsValues": [
+            {
+              "type": "String",
+              "preProcessedValue": "@p",
+              "localVarName": null,
+              "isFunctionRawCode": false,
+              "functionInvocation": null
+            },
+            {
+              "type": "CodeBlock",
+              "preProcessedValue": null,
+              "localVarName": null,
+              "isFunctionRawCode": true,
+              "functionInvocation": {
+                "functionName": "Checks",
+                "argumentsValues": [],
+                "expressionType": null
+              }
+            }
+          ],
+          "expressionType": null
+        }
+      }
+    },
+    {
+      "name": "evRunnerScoreboardName",
+      "value": {
+        "type": "GlobalVar",
+        "preProcessedValue": "sneaking",
+        "localVarName": null,
+        "isFunctionRawCode": false,
+        "functionInvocation": null
+      }
+    },
+    {
+      "name": "evRunnerCallback",
+      "value": {
+        "type": "GlobalVar",
+        "preProcessedValue": null,
+        "localVarName": null,
+        "isFunctionRawCode": true,
+        "functionInvocation": {
+          "functionName": "At",
+          "argumentsValues": [
+            {
+              "type": "String",
+              "preProcessedValue": "@p",
+              "localVarName": null,
+              "isFunctionRawCode": false,
+              "functionInvocation": null
+            },
+            {
+              "type": "CodeBlock",
+              "preProcessedValue": null,
+              "localVarName": null,
+              "isFunctionRawCode": true,
+              "functionInvocation": {
+                "functionName": "Checks",
+                "argumentsValues": [],
+                "expressionType": null
+              }
+            }
+          ],
+          "expressionType": null
+        }
+      }
+    },
+    {
+      "name": "var",
+      "value": {
+        "type": "String",
+        "preProcessedValue": "__sys_stop_sneaking",
+        "localVarName": null,
+        "isFunctionRawCode": false,
+        "functionInvocation": null
+      }
+    },
+    {
+      "name": "value",
+      "value": {
+        "type": "Int",
+        "preProcessedValue": "0",
+        "localVarName": null,
+        "isFunctionRawCode": false,
+        "functionInvocation": null
+      }
+    },
+    {
+      "name": "whileEqualCallback",
+      "value": {
+        "type": "CodeBlock",
+        "preProcessedValue": null,
+        "localVarName": null,
+        "isFunctionRawCode": true,
+        "functionInvocation": {
+          "functionName": "EvRunner8",
+          "argumentsValues": [],
+          "expressionType": null
+        }
+      }
+    }
+  ],
+  "customDefines": [
+    {
+      "functionArguments": [
+        {
+          "name": "varName",
+          "type": "String"
+        },
+        {
+          "name": "event",
+          "type": "String"
+        }
+      ],
+      "functionName": "EventRegisterUCHC",
+      "functionExpression": "scoreboard objectives add __sys_event_?varName? ?event?"
+    },
+    {
+      "functionArguments": [
+        {
+          "name": "evName",
+          "type": "String"
+        }
+      ],
+      "functionName": "EvReset",
+      "functionExpression": "scoreboard players reset @a __sys_event_?evName?"
+    },
+    {
+      "functionArguments": [
+        {
+          "name": "command",
+          "type": "String"
+        }
+      ],
+      "functionName": "Execute",
+      "functionExpression": "?command?"
+    },
+    {
+      "functionArguments": [
+        {
+          "name": "as",
+          "type": "String"
+        },
+        {
+          "name": "command",
+          "type": "String"
+        }
+      ],
+      "functionName": "As",
+      "functionExpression": "execute as ?as? run ?command?"
+    },
+    {
+      "functionArguments": [
+        {
+          "name": "message",
+          "type": "String"
+        }
+      ],
+      "functionName": "Print",
+      "functionExpression": "say ?message?"
+    },
+    {
+      "functionArguments": [
+        {
+          "name": "at",
+          "type": "String"
+        },
+        {
+          "name": "command",
+          "type": "String"
+        }
+      ],
+      "functionName": "At",
+      "functionExpression": "execute at ?at? run ?command?"
+    },
+    {
+      "functionArguments": [
+        {
+          "name": "at",
+          "type": "String"
+        },
+        {
+          "name": "command",
+          "type": "String"
+        }
+      ],
+      "functionName": "AtAnchored",
+      "functionExpression": "execute at ?at? anchored eyes run ?command?"
+    },
+    {
+      "functionArguments": [
+        {
+          "name": "entitySelector",
+          "type": "String"
+        },
+        {
+          "name": "xyz",
+          "type": "String"
+        }
+      ],
+      "functionName": "TpEntity",
+      "functionExpression": "tp ?entitySelector? ?xyz?"
+    },
+    {
+      "functionArguments": [
+        {
+          "name": "entitySelector",
+          "type": "String"
+        },
+        {
+          "name": "xyz",
+          "type": "String"
+        },
+        {
+          "name": "facingEntity",
+          "type": "String"
+        }
+      ],
+      "functionName": "TpEntityFacing",
+      "functionExpression": "tp ?entitySelector? ?xyz? facing entity ?facingEntity?"
+    },
+    {
+      "functionArguments": [
+        {
+          "name": "maxDistance",
+          "type": "String"
+        },
+        {
+          "name": "command",
+          "type": "String"
+        },
+        {
+          "name": "entitySelector",
+          "type": "String"
+        }
+      ],
+      "functionName": "EntityInRadius",
+      "functionExpression": "execute at @s as @e[distance=..?maxDistance?,?entitySelector?] run ?command?"
+    },
+    {
+      "functionArguments": [
+        {
+          "name": "maxDistance",
+          "type": "String"
+        },
+        {
+          "name": "command",
+          "type": "String"
+        },
+        {
+          "name": "entitySelector",
+          "type": "String"
+        }
+      ],
+      "functionName": "EntityNotInRadius",
+      "functionExpression": "execute at @s unless entity @e[distance=..?maxDistance?,?entitySelector?] run ?command?"
+    },
+    {
+      "functionArguments": [
+        {
+          "name": "number",
+          "type": "String"
+        }
+      ],
+      "functionName": "Damage",
+      "functionExpression": "damage @s ?number?"
+    },
+    {
+      "functionArguments": [
+        {
+          "name": "source",
+          "type": "String"
+        },
+        {
+          "name": "dest",
+          "type": "String"
+        },
+        {
+          "name": "speed",
+          "type": "Float"
+        }
+      ],
+      "functionName": "MoveTo",
+      "functionExpression": "execute as ?source? at ?source? run tp @s ^ ^ ^?speed? facing entity ?dest?"
+    },
+    {
+      "functionArguments": [
+        {
+          "name": "source",
+          "type": "String"
+        },
+        {
+          "name": "dest",
+          "type": "String"
+        },
+        {
+          "name": "xyz",
+          "type": "String"
+        }
+      ],
+      "functionName": "MoveToXYZ",
+      "functionExpression": "execute as ?source? at ?source? run tp @s ?xyz? facing entity ?dest?"
+    },
+    {
+      "functionArguments": [
+        {
+          "name": "selector",
+          "type": "String"
+        },
+        {
+          "name": "command",
+          "type": "String"
+        }
+      ],
+      "functionName": "NotEntity",
+      "functionExpression": "execute unless entity ?selector? run ?command?"
+    },
+    {
+      "functionArguments": [
+        {
+          "name": "name",
+          "type": "String"
+        },
+        {
+          "name": "xyz",
+          "type": "String"
+        }
+      ],
+      "functionName": "Particle",
+      "functionExpression": "particle ?name? ?xyz?"
+    },
+    {
+      "functionArguments": [
+        {
+          "name": "entityMcId",
+          "type": "String"
+        },
+        {
+          "name": "xyz",
+          "type": "String"
+        },
+        {
+          "name": "data",
+          "type": "String"
+        }
+      ],
+      "functionName": "SummonData",
+      "functionExpression": "summon ?entityMcId? ?xyz? ?data?"
+    },
+    {
+      "functionArguments": [
+        {
+          "name": "entityMcId",
+          "type": "String"
+        },
+        {
+          "name": "xyz",
+          "type": "String"
+        }
+      ],
+      "functionName": "Summon",
+      "functionExpression": "summon ?entityMcId? ?xyz?"
+    },
+    {
+      "functionArguments": [
+        {
+          "name": "entityMcId",
+          "type": "String"
+        },
+        {
+          "name": "xyz",
+          "type": "String"
+        },
+        {
+          "name": "tag",
+          "type": "String"
+        }
+      ],
+      "functionName": "SummonTag",
+      "functionExpression": "summon ?entityMcId? ?xyz? {Tags:[\u0027?tag?\u0027]}"
+    },
+    {
+      "functionArguments": [
+        {
+          "name": "itemId",
+          "type": "String"
+        },
+        {
+          "name": "number",
+          "type": "String"
+        }
+      ],
+      "functionName": "Clear",
+      "functionExpression": "clear @a ?itemId? ?number?"
+    },
+    {
+      "functionArguments": [
+        {
+          "name": "entity",
+          "type": "String"
+        }
+      ],
+      "functionName": "Kill",
+      "functionExpression": "kill ?entity?"
+    },
+    {
+      "functionArguments": [
+        {
+          "name": "selector",
+          "type": "String"
+        },
+        {
+          "name": "newItem",
+          "type": "String"
+        }
+      ],
+      "functionName": "ReplaceItem",
+      "functionExpression": "item replace entity ?selector? weapon with ?newItem?"
+    }
+  ],
+  "functions": [
+    {
+      "name": "MainLoop",
+      "functionArgs": [],
+      "lines": [
+        {
+          "functionName": "At",
+          "argumentsValues": [
+            {
+              "type": "String",
+              "preProcessedValue": "@e[tag=projectile]",
+              "localVarName": null,
+              "isFunctionRawCode": false,
+              "functionInvocation": null
+            },
+            {
+              "type": "CodeBlock",
+              "preProcessedValue": null,
+              "localVarName": null,
+              "isFunctionRawCode": true,
+              "functionInvocation": {
+                "functionName": "Particle",
+                "argumentsValues": [
+                  {
+                    "type": "String",
+                    "preProcessedValue": "explosion",
+                    "localVarName": null,
+                    "isFunctionRawCode": false,
+                    "functionInvocation": null
+                  },
+                  {
+                    "type": "String",
+                    "preProcessedValue": "~ ~ ~",
+                    "localVarName": null,
+                    "isFunctionRawCode": false,
+                    "functionInvocation": null
+                  }
+                ],
+                "expressionType": null
+              }
+            }
+          ],
+          "expressionType": "FunctionInvocationExpression"
+        },
+        {
+          "functionName": "As",
+          "argumentsValues": [
+            {
+              "type": "String",
+              "preProcessedValue": "@e[tag=projectile]",
+              "localVarName": null,
+              "isFunctionRawCode": false,
+              "functionInvocation": null
+            },
+            {
+              "type": "CodeBlock",
+              "preProcessedValue": null,
+              "localVarName": null,
+              "isFunctionRawCode": true,
+              "functionInvocation": {
+                "functionName": "EntityInRadius",
+                "argumentsValues": [
+                  {
+                    "type": "Int",
+                    "preProcessedValue": "2",
+                    "localVarName": null,
+                    "isFunctionRawCode": false,
+                    "functionInvocation": null
+                  },
+                  {
+                    "type": "CodeBlock",
+                    "preProcessedValue": null,
+                    "localVarName": null,
+                    "isFunctionRawCode": true,
+                    "functionInvocation": {
+                      "functionName": "Kill",
+                      "argumentsValues": [
+                        {
+                          "type": "String",
+                          "preProcessedValue": "@s",
+                          "localVarName": null,
+                          "isFunctionRawCode": false,
+                          "functionInvocation": null
+                        }
+                      ],
+                      "expressionType": null
+                    }
+                  },
+                  {
+                    "type": "String",
+                    "preProcessedValue": "tag=!projectile,tag=!raycast,type=!player",
+                    "localVarName": null,
+                    "isFunctionRawCode": false,
+                    "functionInvocation": null
+                  }
+                ],
+                "expressionType": null
+              }
+            }
+          ],
+          "expressionType": "FunctionInvocationExpression"
+        },
+        {
+          "functionName": "As",
+          "argumentsValues": [
+            {
+              "type": "String",
+              "preProcessedValue": "@e[tag=projectile]",
+              "localVarName": null,
+              "isFunctionRawCode": false,
+              "functionInvocation": null
+            },
+            {
+              "type": "CodeBlock",
+              "preProcessedValue": null,
+              "localVarName": null,
+              "isFunctionRawCode": true,
+              "functionInvocation": {
+                "functionName": "EntityInRadius",
+                "argumentsValues": [
+                  {
+                    "type": "Int",
+                    "preProcessedValue": "2",
+                    "localVarName": null,
+                    "isFunctionRawCode": false,
+                    "functionInvocation": null
+                  },
+                  {
+                    "type": "CodeBlock",
+                    "preProcessedValue": null,
+                    "localVarName": null,
+                    "isFunctionRawCode": true,
+                    "functionInvocation": {
+                      "functionName": "Kill",
+                      "argumentsValues": [
+                        {
+                          "type": "String",
+                          "preProcessedValue": "@e[tag=projectile]",
+                          "localVarName": null,
+                          "isFunctionRawCode": false,
+                          "functionInvocation": null
+                        }
+                      ],
+                      "expressionType": null
+                    }
+                  },
+                  {
+                    "type": "String",
+                    "preProcessedValue": "tag=!projectile,type=!player",
+                    "localVarName": null,
+                    "isFunctionRawCode": false,
+                    "functionInvocation": null
+                  }
+                ],
+                "expressionType": null
+              }
+            }
+          ],
+          "expressionType": "FunctionInvocationExpression"
+        },
+        {
+          "functionName": "MoveTo",
+          "argumentsValues": [
+            {
+              "type": "String",
+              "preProcessedValue": "@e[tag=projectile,limit=1,sort=nearest]",
+              "localVarName": null,
+              "isFunctionRawCode": false,
+              "functionInvocation": null
+            },
+            {
+              "type": "String",
+              "preProcessedValue": "@e[tag=raycast,limit=1]",
+              "localVarName": null,
+              "isFunctionRawCode": false,
+              "functionInvocation": null
+            },
+            {
+              "type": "Float",
+              "preProcessedValue": "2.0",
+              "localVarName": null,
+              "isFunctionRawCode": false,
+              "functionInvocation": null
+            }
+          ],
+          "expressionType": "FunctionInvocationExpression"
+        },
+        {
+          "functionName": "NotEntity",
+          "argumentsValues": [
+            {
+              "type": "String",
+              "preProcessedValue": "@e[tag=projectile]",
+              "localVarName": null,
+              "isFunctionRawCode": false,
+              "functionInvocation": null
+            },
+            {
+              "type": "CodeBlock",
+              "preProcessedValue": null,
+              "localVarName": null,
+              "isFunctionRawCode": true,
+              "functionInvocation": {
+                "functionName": "As",
+                "argumentsValues": [
+                  {
+                    "type": "String",
+                    "preProcessedValue": "@p",
+                    "localVarName": null,
+                    "isFunctionRawCode": false,
+                    "functionInvocation": null
+                  },
+                  {
+                    "type": "CodeBlock",
+                    "preProcessedValue": null,
+                    "localVarName": null,
+                    "isFunctionRawCode": true,
+                    "functionInvocation": {
+                      "functionName": "AtAnchored",
+                      "argumentsValues": [
+                        {
+                          "type": "String",
+                          "preProcessedValue": "@s",
+                          "localVarName": null,
+                          "isFunctionRawCode": false,
+                          "functionInvocation": null
+                        },
+                        {
+                          "type": "CodeBlock",
+                          "preProcessedValue": null,
+                          "localVarName": null,
+                          "isFunctionRawCode": true,
+                          "functionInvocation": {
+                            "functionName": "TpEntity",
+                            "argumentsValues": [
+                              {
+                                "type": "String",
+                                "preProcessedValue": "@e[tag=raycast,limit=1]",
+                                "localVarName": null,
+                                "isFunctionRawCode": false,
+                                "functionInvocation": null
+                              },
+                              {
+                                "type": "String",
+                                "preProcessedValue": "^ ^ ^35",
+                                "localVarName": null,
+                                "isFunctionRawCode": false,
+                                "functionInvocation": null
+                              }
+                            ],
+                            "expressionType": null
+                          }
+                        }
+                      ],
+                      "expressionType": null
+                    }
+                  }
+                ],
+                "expressionType": null
+              }
+            }
+          ],
+          "expressionType": "FunctionInvocationExpression"
+        }
+      ],
+      "isAsCode": false,
+      "flags": [
+        "loop"
+      ]
+    },
+    {
+      "name": "WhenOk",
+      "functionArgs": [],
+      "lines": [
+        {
+          "functionName": "NotEntity",
+          "argumentsValues": [
+            {
+              "type": "String",
+              "preProcessedValue": "@e[tag=projectile]",
+              "localVarName": null,
+              "isFunctionRawCode": false,
+              "functionInvocation": null
+            },
+            {
+              "type": "CodeBlock",
+              "preProcessedValue": null,
+              "localVarName": null,
+              "isFunctionRawCode": true,
+              "functionInvocation": {
+                "functionName": "Clear",
+                "argumentsValues": [
+                  {
+                    "type": "String",
+                    "preProcessedValue": "minecraft:iron_nugget",
+                    "localVarName": null,
+                    "isFunctionRawCode": false,
+                    "functionInvocation": null
+                  },
+                  {
+                    "type": "Int",
+                    "preProcessedValue": "1",
+                    "localVarName": null,
+                    "isFunctionRawCode": false,
+                    "functionInvocation": null
+                  }
+                ],
+                "expressionType": null
+              }
+            }
+          ],
+          "expressionType": "FunctionInvocationExpression"
+        },
+        {
+          "functionName": "NotEntity",
+          "argumentsValues": [
+            {
+              "type": "String",
+              "preProcessedValue": "@e[tag=projectile]",
+              "localVarName": null,
+              "isFunctionRawCode": false,
+              "functionInvocation": null
+            },
+            {
+              "type": "CodeBlock",
+              "preProcessedValue": null,
+              "localVarName": null,
+              "isFunctionRawCode": true,
+              "functionInvocation": {
+                "functionName": "As",
+                "argumentsValues": [
+                  {
+                    "type": "String",
+                    "preProcessedValue": "@p",
+                    "localVarName": null,
+                    "isFunctionRawCode": false,
+                    "functionInvocation": null
+                  },
+                  {
+                    "type": "CodeBlock",
+                    "preProcessedValue": null,
+                    "localVarName": null,
+                    "isFunctionRawCode": true,
+                    "functionInvocation": {
+                      "functionName": "AtAnchored",
+                      "argumentsValues": [
+                        {
+                          "type": "String",
+                          "preProcessedValue": "@s",
+                          "localVarName": null,
+                          "isFunctionRawCode": false,
+                          "functionInvocation": null
+                        },
+                        {
+                          "type": "CodeBlock",
+                          "preProcessedValue": null,
+                          "localVarName": null,
+                          "isFunctionRawCode": true,
+                          "functionInvocation": {
+                            "functionName": "SummonData",
+                            "argumentsValues": [
+                              {
+                                "type": "String",
+                                "preProcessedValue": "armor_stand",
+                                "localVarName": null,
+                                "isFunctionRawCode": false,
+                                "functionInvocation": null
+                              },
+                              {
+                                "type": "String",
+                                "preProcessedValue": "^ ^ ^",
+                                "localVarName": null,
+                                "isFunctionRawCode": false,
+                                "functionInvocation": null
+                              },
+                              {
+                                "type": "String",
+                                "preProcessedValue": "{Invisible:true,Invulnerable:true,Tags:[\u0027projectile\u0027]}",
+                                "localVarName": null,
+                                "isFunctionRawCode": false,
+                                "functionInvocation": null
+                              }
+                            ],
+                            "expressionType": null
+                          }
+                        }
+                      ],
+                      "expressionType": null
+                    }
+                  }
+                ],
+                "expressionType": null
+              }
+            }
+          ],
+          "expressionType": "FunctionInvocationExpression"
+        }
+      ],
+      "isAsCode": false,
+      "flags": []
+    },
+    {
+      "name": "InInventory2",
+      "functionArgs": [],
+      "lines": [
+        {
+          "functionName": "As",
+          "argumentsValues": [
+            {
+              "type": "String",
+              "preProcessedValue": "@a[nbt={Inventory:[{id:\u0027minecraft:iron_nugget\u0027}]}]",
+              "localVarName": null,
+              "isFunctionRawCode": false,
+              "functionInvocation": null
+            },
+            {
+              "type": "GlobalVar",
+              "preProcessedValue": null,
+              "localVarName": null,
+              "isFunctionRawCode": true,
+              "functionInvocation": {
+                "functionName": "WhenOk",
+                "argumentsValues": [],
+                "expressionType": null
+              }
+            }
+          ],
+          "expressionType": "FunctionInvocationExpression"
+        }
+      ],
+      "isAsCode": false,
+      "flags": null
+    },
+    {
+      "name": "InHand3",
+      "functionArgs": [],
+      "lines": [
+        {
+          "functionName": "As",
+          "argumentsValues": [
+            {
+              "type": "String",
+              "preProcessedValue": "@a[nbt={SelectedItem:{id:\u0027minecraft:bow\u0027}}]",
+              "localVarName": null,
+              "isFunctionRawCode": false,
+              "functionInvocation": null
+            },
+            {
+              "type": "GlobalVar",
+              "preProcessedValue": null,
+              "localVarName": null,
+              "isFunctionRawCode": true,
+              "functionInvocation": {
+                "functionName": "InInventory2",
+                "argumentsValues": [],
+                "expressionType": null
+              }
+            }
+          ],
+          "expressionType": "FunctionInvocationExpression"
+        }
+      ],
+      "isAsCode": false,
+      "flags": null
+    },
+    {
+      "name": "InInventory4",
+      "functionArgs": [],
+      "lines": [
+        {
+          "functionName": "As",
+          "argumentsValues": [
+            {
+              "type": "String",
+              "preProcessedValue": "@a[nbt={Inventory:[{id:\u0027minecraft:iron_nugget\u0027}]}]",
+              "localVarName": null,
+              "isFunctionRawCode": false,
+              "functionInvocation": null
+            },
+            {
+              "type": "GlobalVar",
+              "preProcessedValue": null,
+              "localVarName": null,
+              "isFunctionRawCode": true,
+              "functionInvocation": {
+                "functionName": "ReplaceItem",
+                "argumentsValues": [
+                  {
+                    "type": "String",
+                    "preProcessedValue": "@p",
+                    "localVarName": null,
+                    "isFunctionRawCode": false,
+                    "functionInvocation": null
+                  },
+                  {
+                    "type": "String",
+                    "preProcessedValue": "crossbow[charged_projectiles=[{id:\u0027minecraft:arrow\u0027,count:1}]]",
+                    "localVarName": null,
+                    "isFunctionRawCode": false,
+                    "functionInvocation": null
+                  }
+                ],
+                "expressionType": null
+              }
+            }
+          ],
+          "expressionType": "FunctionInvocationExpression"
+        }
+      ],
+      "isAsCode": false,
+      "flags": null
+    },
+    {
+      "name": "InInventory5",
+      "functionArgs": [],
+      "lines": [
+        {
+          "functionName": "As",
+          "argumentsValues": [
+            {
+              "type": "String",
+              "preProcessedValue": "@a[nbt={Inventory:[{id:\u0027minecraft:iron_nugget\u0027}]}]",
+              "localVarName": null,
+              "isFunctionRawCode": false,
+              "functionInvocation": null
+            },
+            {
+              "type": "GlobalVar",
+              "preProcessedValue": null,
+              "localVarName": null,
+              "isFunctionRawCode": true,
+              "functionInvocation": {
+                "functionName": "ReplaceItem",
+                "argumentsValues": [
+                  {
+                    "type": "String",
+                    "preProcessedValue": "@p",
+                    "localVarName": null,
+                    "isFunctionRawCode": false,
+                    "functionInvocation": null
+                  },
+                  {
+                    "type": "String",
+                    "preProcessedValue": "crossbow[charged_projectiles=[{id:\u0027minecraft:arrow\u0027,count:1}]]",
+                    "localVarName": null,
+                    "isFunctionRawCode": false,
+                    "functionInvocation": null
+                  }
+                ],
+                "expressionType": null
+              }
+            }
+          ],
+          "expressionType": "FunctionInvocationExpression"
+        }
+      ],
+      "isAsCode": false,
+      "flags": null
+    },
+    {
+      "name": "InHand5",
+      "functionArgs": [],
+      "lines": [
+        {
+          "functionName": "As",
+          "argumentsValues": [
+            {
+              "type": "String",
+              "preProcessedValue": "@a[nbt={SelectedItem:{id:\u0027minecraft:crossbow\u0027}}]",
+              "localVarName": null,
+              "isFunctionRawCode": false,
+              "functionInvocation": null
+            },
+            {
+              "type": "GlobalVar",
+              "preProcessedValue": null,
+              "localVarName": null,
+              "isFunctionRawCode": true,
+              "functionInvocation": {
+                "functionName": "InInventory5",
+                "argumentsValues": [],
+                "expressionType": null
+              }
+            }
+          ],
+          "expressionType": "FunctionInvocationExpression"
+        }
+      ],
+      "isAsCode": false,
+      "flags": null
+    },
+    {
+      "name": "Checks",
+      "functionArgs": [],
+      "lines": [
+        {
+          "functionName": "InHand3",
+          "argumentsValues": [],
+          "expressionType": "FunctionInvocationExpression"
+        },
+        {
+          "functionName": "InHand5",
+          "argumentsValues": [],
+          "expressionType": "FunctionInvocationExpression"
+        }
+      ],
+      "isAsCode": false,
+      "flags": []
+    },
+    {
+      "name": "EvRunner8",
+      "functionArgs": [],
+      "lines": [
+        {
+          "functionName": "As",
+          "argumentsValues": [
+            {
+              "type": "String",
+              "preProcessedValue": "@a[scores={__sys_event_sneaking=1..}]",
+              "localVarName": null,
+              "isFunctionRawCode": false,
+              "functionInvocation": null
+            },
+            {
+              "type": "GlobalVar",
+              "preProcessedValue": null,
+              "localVarName": null,
+              "isFunctionRawCode": true,
+              "functionInvocation": {
+                "functionName": "At",
+                "argumentsValues": [
+                  {
+                    "type": "String",
+                    "preProcessedValue": "@p",
+                    "localVarName": null,
+                    "isFunctionRawCode": false,
+                    "functionInvocation": null
+                  },
+                  {
+                    "type": "CodeBlock",
+                    "preProcessedValue": null,
+                    "localVarName": null,
+                    "isFunctionRawCode": true,
+                    "functionInvocation": {
+                      "functionName": "Checks",
+                      "argumentsValues": [],
+                      "expressionType": null
+                    }
+                  }
+                ],
+                "expressionType": null
+              }
+            }
+          ],
+          "expressionType": "FunctionInvocationExpression"
+        },
+        {
+          "functionName": "As",
+          "argumentsValues": [
+            {
+              "type": "String",
+              "preProcessedValue": "@a[scores={__sys_event_sneaking=1..}]",
+              "localVarName": null,
+              "isFunctionRawCode": false,
+              "functionInvocation": null
+            },
+            {
+              "type": "CodeBlock",
+              "preProcessedValue": null,
+              "localVarName": null,
+              "isFunctionRawCode": true,
+              "functionInvocation": {
+                "functionName": "EvReset",
+                "argumentsValues": [
+                  {
+                    "type": "GlobalVar",
+                    "preProcessedValue": "sneaking",
+                    "localVarName": null,
+                    "isFunctionRawCode": false,
+                    "functionInvocation": null
+                  }
+                ],
+                "expressionType": null
+              }
+            }
+          ],
+          "expressionType": "FunctionInvocationExpression"
+        }
+      ],
+      "isAsCode": false,
+      "flags": null
+    },
+    {
+      "name": "WhileEqual9",
+      "functionArgs": [],
+      "lines": [
+        {
+          "condition": {
+            "firstValue": {
+              "type": "LocalVar",
+              "preProcessedValue": null,
+              "localVarName": "__sys_stop_sneaking",
+              "isFunctionRawCode": false,
+              "functionInvocation": null
+            },
+            "conditionSymbol": "=",
+            "secondValue": {
+              "type": "GlobalVar",
+              "preProcessedValue": "0",
+              "localVarName": null,
+              "isFunctionRawCode": false,
+              "functionInvocation": null
+            }
+          },
+          "functionInvocation": {
+            "functionName": "Execute",
+            "argumentsValues": [
+              {
+                "type": "GlobalVar",
+                "preProcessedValue": null,
+                "localVarName": null,
+                "isFunctionRawCode": true,
+                "functionInvocation": {
+                  "functionName": "EvRunner8",
+                  "argumentsValues": [],
+                  "expressionType": null
+                }
+              }
+            ],
+            "expressionType": null
+          },
+          "expressionType": "IfExpression"
+        },
+        {
+          "condition": {
+            "firstValue": {
+              "type": "LocalVar",
+              "preProcessedValue": null,
+              "localVarName": "__sys_stop_sneaking",
+              "isFunctionRawCode": false,
+              "functionInvocation": null
+            },
+            "conditionSymbol": "=",
+            "secondValue": {
+              "type": "GlobalVar",
+              "preProcessedValue": "0",
+              "localVarName": null,
+              "isFunctionRawCode": false,
+              "functionInvocation": null
+            }
+          },
+          "functionInvocation": {
+            "functionName": "Execute",
+            "argumentsValues": [
+              {
+                "type": "GlobalVar",
+                "preProcessedValue": null,
+                "localVarName": null,
+                "isFunctionRawCode": false,
+                "functionInvocation": {
+                  "functionName": "WhileEqual9",
+                  "argumentsValues": [],
+                  "expressionType": null
+                }
+              }
+            ],
+            "expressionType": null
+          },
+          "expressionType": "IfExpression"
+        }
+      ],
+      "isAsCode": false,
+      "flags": null
+    },
+    {
+      "name": "EvRegister8",
+      "functionArgs": [],
+      "lines": [
+        {
+          "initialValue": {
+            "type": "Int",
+            "preProcessedValue": "0",
+            "localVarName": null,
+            "isFunctionRawCode": false,
+            "functionInvocation": null
+          },
+          "type": "Int",
+          "name": "__sys_stop_sneaking",
+          "expressionType": "LocalVariableExpression"
+        },
+        {
+          "functionName": "EventRegisterUCHC",
+          "argumentsValues": [
+            {
+              "type": "GlobalVar",
+              "preProcessedValue": "sneaking",
+              "localVarName": null,
+              "isFunctionRawCode": false,
+              "functionInvocation": null
+            },
+            {
+              "type": "GlobalVar",
+              "preProcessedValue": "minecraft.custom:minecraft.sneak_time",
+              "localVarName": null,
+              "isFunctionRawCode": false,
+              "functionInvocation": null
+            }
+          ],
+          "expressionType": "FunctionInvocationExpression"
+        },
+        {
+          "functionName": "WhileEqual9",
+          "argumentsValues": [],
+          "expressionType": "FunctionInvocationExpression"
+        }
+      ],
+      "isAsCode": false,
+      "flags": null
+    },
+    {
+      "name": "Main",
+      "functionArgs": [],
+      "lines": [
+        {
+          "functionName": "Kill",
+          "argumentsValues": [
+            {
+              "type": "String",
+              "preProcessedValue": "@e[tag=raycast]",
+              "localVarName": null,
+              "isFunctionRawCode": false,
+              "functionInvocation": null
+            }
+          ],
+          "expressionType": "FunctionInvocationExpression"
+        },
+        {
+          "functionName": "As",
+          "argumentsValues": [
+            {
+              "type": "String",
+              "preProcessedValue": "@p",
+              "localVarName": null,
+              "isFunctionRawCode": false,
+              "functionInvocation": null
+            },
+            {
+              "type": "CodeBlock",
+              "preProcessedValue": null,
+              "localVarName": null,
+              "isFunctionRawCode": true,
+              "functionInvocation": {
+                "functionName": "AtAnchored",
+                "argumentsValues": [
+                  {
+                    "type": "String",
+                    "preProcessedValue": "@s",
+                    "localVarName": null,
+                    "isFunctionRawCode": false,
+                    "functionInvocation": null
+                  },
+                  {
+                    "type": "CodeBlock",
+                    "preProcessedValue": null,
+                    "localVarName": null,
+                    "isFunctionRawCode": true,
+                    "functionInvocation": {
+                      "functionName": "SummonData",
+                      "argumentsValues": [
+                        {
+                          "type": "String",
+                          "preProcessedValue": "armor_stand",
+                          "localVarName": null,
+                          "isFunctionRawCode": false,
+                          "functionInvocation": null
+                        },
+                        {
+                          "type": "String",
+                          "preProcessedValue": "^ ^ ^35",
+                          "localVarName": null,
+                          "isFunctionRawCode": false,
+                          "functionInvocation": null
+                        },
+                        {
+                          "type": "String",
+                          "preProcessedValue": "{Invisible:true,Invulnerable:true,Tags:[\u0027raycast\u0027]}",
+                          "localVarName": null,
+                          "isFunctionRawCode": false,
+                          "functionInvocation": null
+                        }
+                      ],
+                      "expressionType": null
+                    }
+                  }
+                ],
+                "expressionType": null
+              }
+            }
+          ],
+          "expressionType": "FunctionInvocationExpression"
+        },
+        {
+          "functionName": "EvRegister8",
+          "argumentsValues": [],
+          "expressionType": "FunctionInvocationExpression"
+        }
+      ],
+      "isAsCode": false,
+      "flags": []
+    }
+  ],
+  "localVariables": [
+    {
+      "initialValue": {
+        "type": "Int",
+        "preProcessedValue": "0",
+        "localVarName": null,
+        "isFunctionRawCode": false,
+        "functionInvocation": null
+      },
+      "type": "Int",
+      "name": "__sys_stop_sneaking",
+      "expressionType": "LocalVariableExpression"
+    }
+  ]
+}

@@ -1,0 +1,8 @@
+// Summon (with NBT)
+[SummonData(String entityMcId; String xyz; String data;)] => <summon ?entityMcId? ?xyz? ?data?>
+
+// Summon (without any data)
+[Summon(String entityMcId; String xyz;)] => <summon ?entityMcId? ?xyz?>
+
+// Summon (without any data)
+[SummonTag(String entityMcId; String xyz; String tag;)] => <summon ?entityMcId? ?xyz? {Tags:['?tag?']}>

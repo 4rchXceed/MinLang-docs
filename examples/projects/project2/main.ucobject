@@ -1,0 +1,520 @@
+{
+  "globalVars": [
+    {
+      "name": "self",
+      "value": {
+        "type": "CodeBlock",
+        "preProcessedValue": null,
+        "localVarName": "self",
+        "isFunctionRawCode": false,
+        "functionInvocation": {
+          "functionName": "Main",
+          "argumentsValues": [],
+          "expressionType": null
+        }
+      }
+    },
+    {
+      "name": "explodeAtAs",
+      "value": {
+        "type": "String",
+        "preProcessedValue": "@e[tag=projectile]",
+        "localVarName": null,
+        "isFunctionRawCode": false,
+        "functionInvocation": null
+      }
+    }
+  ],
+  "customDefines": [
+    {
+      "functionArguments": [
+        {
+          "name": "entitySelector",
+          "type": "String"
+        },
+        {
+          "name": "xyz",
+          "type": "String"
+        }
+      ],
+      "functionName": "TpEntity",
+      "functionExpression": "tp ?entitySelector? ?xyz?"
+    },
+    {
+      "functionArguments": [
+        {
+          "name": "entitySelector",
+          "type": "String"
+        },
+        {
+          "name": "xyz",
+          "type": "String"
+        },
+        {
+          "name": "facingEntity",
+          "type": "String"
+        }
+      ],
+      "functionName": "TpEntityFacing",
+      "functionExpression": "tp ?entitySelector? ?xyz? facing entity ?facingEntity?"
+    },
+    {
+      "functionArguments": [
+        {
+          "name": "at",
+          "type": "String"
+        },
+        {
+          "name": "command",
+          "type": "String"
+        }
+      ],
+      "functionName": "At",
+      "functionExpression": "execute at ?at? run ?command?"
+    },
+    {
+      "functionArguments": [
+        {
+          "name": "at",
+          "type": "String"
+        },
+        {
+          "name": "command",
+          "type": "String"
+        }
+      ],
+      "functionName": "AtAnchored",
+      "functionExpression": "execute at ?at? anchored eyes run ?command?"
+    },
+    {
+      "functionArguments": [
+        {
+          "name": "as",
+          "type": "String"
+        },
+        {
+          "name": "command",
+          "type": "String"
+        }
+      ],
+      "functionName": "As",
+      "functionExpression": "execute as ?as? run ?command?"
+    },
+    {
+      "functionArguments": [
+        {
+          "name": "entityMcId",
+          "type": "String"
+        },
+        {
+          "name": "xyz",
+          "type": "String"
+        },
+        {
+          "name": "data",
+          "type": "String"
+        }
+      ],
+      "functionName": "SummonData",
+      "functionExpression": "summon ?entityMcId? ?xyz? ?data?"
+    },
+    {
+      "functionArguments": [
+        {
+          "name": "entityMcId",
+          "type": "String"
+        },
+        {
+          "name": "xyz",
+          "type": "String"
+        }
+      ],
+      "functionName": "Summon",
+      "functionExpression": "summon ?entityMcId? ?xyz?"
+    },
+    {
+      "functionArguments": [
+        {
+          "name": "entityMcId",
+          "type": "String"
+        },
+        {
+          "name": "xyz",
+          "type": "String"
+        },
+        {
+          "name": "tag",
+          "type": "String"
+        }
+      ],
+      "functionName": "SummonTag",
+      "functionExpression": "summon ?entityMcId? ?xyz? {Tags:[\u0027?tag?\u0027]}"
+    },
+    {
+      "functionArguments": [
+        {
+          "name": "entity",
+          "type": "String"
+        }
+      ],
+      "functionName": "Kill",
+      "functionExpression": "kill ?entity?"
+    },
+    {
+      "functionArguments": [
+        {
+          "name": "pos",
+          "type": "String"
+        },
+        {
+          "name": "blockType",
+          "type": "String"
+        },
+        {
+          "name": "command",
+          "type": "String"
+        }
+      ],
+      "functionName": "IfNotBlock",
+      "functionExpression": "execute unless block ?pos? ?blockType? run ?command?"
+    },
+    {
+      "functionArguments": [
+        {
+          "name": "selector",
+          "type": "String"
+        },
+        {
+          "name": "command",
+          "type": "String"
+        }
+      ],
+      "functionName": "NotEntity",
+      "functionExpression": "execute unless entity ?selector? run ?command?"
+    }
+  ],
+  "functions": [
+    {
+      "name": "ExplodeAt0",
+      "functionArgs": [],
+      "lines": [
+        {
+          "functionName": "At",
+          "argumentsValues": [
+            {
+              "type": "GlobalVar",
+              "preProcessedValue": "@e[tag=projectile]",
+              "localVarName": null,
+              "isFunctionRawCode": false,
+              "functionInvocation": null
+            },
+            {
+              "type": "CodeBlock",
+              "preProcessedValue": null,
+              "localVarName": null,
+              "isFunctionRawCode": true,
+              "functionInvocation": {
+                "functionName": "SummonData",
+                "argumentsValues": [
+                  {
+                    "type": "String",
+                    "preProcessedValue": "tnt",
+                    "localVarName": null,
+                    "isFunctionRawCode": false,
+                    "functionInvocation": null
+                  },
+                  {
+                    "type": "String",
+                    "preProcessedValue": "~ ~ ~",
+                    "localVarName": null,
+                    "isFunctionRawCode": false,
+                    "functionInvocation": null
+                  },
+                  {
+                    "type": "String",
+                    "preProcessedValue": "{Fuse:0}",
+                    "localVarName": null,
+                    "isFunctionRawCode": false,
+                    "functionInvocation": null
+                  }
+                ],
+                "expressionType": null
+              }
+            }
+          ],
+          "expressionType": "FunctionInvocationExpression"
+        },
+        {
+          "functionName": "Kill",
+          "argumentsValues": [
+            {
+              "type": "GlobalVar",
+              "preProcessedValue": "@e[tag=projectile]",
+              "localVarName": null,
+              "isFunctionRawCode": false,
+              "functionInvocation": null
+            }
+          ],
+          "expressionType": "FunctionInvocationExpression"
+        }
+      ],
+      "isAsCode": false,
+      "flags": null
+    },
+    {
+      "name": "OnGroud",
+      "functionArgs": [],
+      "lines": [
+        {
+          "functionName": "ExplodeAt0",
+          "argumentsValues": [],
+          "expressionType": "FunctionInvocationExpression"
+        },
+        {
+          "functionName": "Kill",
+          "argumentsValues": [
+            {
+              "type": "String",
+              "preProcessedValue": "@e[type=arrow]",
+              "localVarName": null,
+              "isFunctionRawCode": false,
+              "functionInvocation": null
+            }
+          ],
+          "expressionType": "FunctionInvocationExpression"
+        }
+      ],
+      "isAsCode": false,
+      "flags": []
+    },
+    {
+      "name": "MainLoop",
+      "functionArgs": [],
+      "lines": [
+        {
+          "functionName": "As",
+          "argumentsValues": [
+            {
+              "type": "String",
+              "preProcessedValue": "@e[type=arrow]",
+              "localVarName": null,
+              "isFunctionRawCode": false,
+              "functionInvocation": null
+            },
+            {
+              "type": "CodeBlock",
+              "preProcessedValue": null,
+              "localVarName": null,
+              "isFunctionRawCode": true,
+              "functionInvocation": {
+                "functionName": "At",
+                "argumentsValues": [
+                  {
+                    "type": "String",
+                    "preProcessedValue": "@s",
+                    "localVarName": null,
+                    "isFunctionRawCode": false,
+                    "functionInvocation": null
+                  },
+                  {
+                    "type": "CodeBlock",
+                    "preProcessedValue": null,
+                    "localVarName": null,
+                    "isFunctionRawCode": true,
+                    "functionInvocation": {
+                      "functionName": "TpEntity",
+                      "argumentsValues": [
+                        {
+                          "type": "String",
+                          "preProcessedValue": "@e[tag=projectile]",
+                          "localVarName": null,
+                          "isFunctionRawCode": false,
+                          "functionInvocation": null
+                        },
+                        {
+                          "type": "String",
+                          "preProcessedValue": "~ ~ ~",
+                          "localVarName": null,
+                          "isFunctionRawCode": false,
+                          "functionInvocation": null
+                        }
+                      ],
+                      "expressionType": null
+                    }
+                  }
+                ],
+                "expressionType": null
+              }
+            }
+          ],
+          "expressionType": "FunctionInvocationExpression"
+        },
+        {
+          "functionName": "As",
+          "argumentsValues": [
+            {
+              "type": "String",
+              "preProcessedValue": "@e[type=arrow]",
+              "localVarName": null,
+              "isFunctionRawCode": false,
+              "functionInvocation": null
+            },
+            {
+              "type": "CodeBlock",
+              "preProcessedValue": null,
+              "localVarName": null,
+              "isFunctionRawCode": true,
+              "functionInvocation": {
+                "functionName": "At",
+                "argumentsValues": [
+                  {
+                    "type": "String",
+                    "preProcessedValue": "@s",
+                    "localVarName": null,
+                    "isFunctionRawCode": false,
+                    "functionInvocation": null
+                  },
+                  {
+                    "type": "CodeBlock",
+                    "preProcessedValue": null,
+                    "localVarName": null,
+                    "isFunctionRawCode": true,
+                    "functionInvocation": {
+                      "functionName": "IfNotBlock",
+                      "argumentsValues": [
+                        {
+                          "type": "String",
+                          "preProcessedValue": "~ ~-1 ~",
+                          "localVarName": null,
+                          "isFunctionRawCode": false,
+                          "functionInvocation": null
+                        },
+                        {
+                          "type": "String",
+                          "preProcessedValue": "air",
+                          "localVarName": null,
+                          "isFunctionRawCode": false,
+                          "functionInvocation": null
+                        },
+                        {
+                          "type": "CodeBlock",
+                          "preProcessedValue": null,
+                          "localVarName": null,
+                          "isFunctionRawCode": true,
+                          "functionInvocation": {
+                            "functionName": "OnGroud",
+                            "argumentsValues": [],
+                            "expressionType": null
+                          }
+                        }
+                      ],
+                      "expressionType": null
+                    }
+                  }
+                ],
+                "expressionType": null
+              }
+            }
+          ],
+          "expressionType": "FunctionInvocationExpression"
+        },
+        {
+          "functionName": "As",
+          "argumentsValues": [
+            {
+              "type": "String",
+              "preProcessedValue": "@e[type=arrow]",
+              "localVarName": null,
+              "isFunctionRawCode": false,
+              "functionInvocation": null
+            },
+            {
+              "type": "CodeBlock",
+              "preProcessedValue": null,
+              "localVarName": null,
+              "isFunctionRawCode": true,
+              "functionInvocation": {
+                "functionName": "NotEntity",
+                "argumentsValues": [
+                  {
+                    "type": "String",
+                    "preProcessedValue": "@e[tag=projectile]",
+                    "localVarName": null,
+                    "isFunctionRawCode": false,
+                    "functionInvocation": null
+                  },
+                  {
+                    "type": "CodeBlock",
+                    "preProcessedValue": null,
+                    "localVarName": null,
+                    "isFunctionRawCode": true,
+                    "functionInvocation": {
+                      "functionName": "At",
+                      "argumentsValues": [
+                        {
+                          "type": "String",
+                          "preProcessedValue": "@p",
+                          "localVarName": null,
+                          "isFunctionRawCode": false,
+                          "functionInvocation": null
+                        },
+                        {
+                          "type": "CodeBlock",
+                          "preProcessedValue": null,
+                          "localVarName": null,
+                          "isFunctionRawCode": true,
+                          "functionInvocation": {
+                            "functionName": "SummonTag",
+                            "argumentsValues": [
+                              {
+                                "type": "String",
+                                "preProcessedValue": "creeper",
+                                "localVarName": null,
+                                "isFunctionRawCode": false,
+                                "functionInvocation": null
+                              },
+                              {
+                                "type": "String",
+                                "preProcessedValue": "~ ~ ~",
+                                "localVarName": null,
+                                "isFunctionRawCode": false,
+                                "functionInvocation": null
+                              },
+                              {
+                                "type": "String",
+                                "preProcessedValue": "projectile",
+                                "localVarName": null,
+                                "isFunctionRawCode": false,
+                                "functionInvocation": null
+                              }
+                            ],
+                            "expressionType": null
+                          }
+                        }
+                      ],
+                      "expressionType": null
+                    }
+                  }
+                ],
+                "expressionType": null
+              }
+            }
+          ],
+          "expressionType": "FunctionInvocationExpression"
+        }
+      ],
+      "isAsCode": false,
+      "flags": [
+        "loop"
+      ]
+    },
+    {
+      "name": "Main",
+      "functionArgs": [],
+      "lines": [],
+      "isAsCode": false,
+      "flags": []
+    }
+  ],
+  "localVariables": []
+}

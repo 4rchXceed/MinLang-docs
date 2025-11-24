@@ -1,0 +1,2 @@
+// Damage of X damage
+[Damage(String number;)] => <damage @s ?number?>

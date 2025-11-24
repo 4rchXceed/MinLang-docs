@@ -1,0 +1,30 @@
+%import globals.ucl
+%import libmc/cmd.uchc
+%import while.ucl
+
+fun SheepMsg():
+    // Print a custom message
+    Summon()<"sheep"; "~"; "~"; "~">
+    #::myLocalVar::Set()<0>
+SheepMsg
+
+fun PrintMsg():
+    Print()<"Test">
+PrintMsg
+
+fun MyFun():
+    // Print the message
+    #::myLocalVar::Add()<1>
+    If (#::myLocalVar = 1): PrintMsg()<>
+    For (0; 10; 1) -> i: MyFun()<>
+MyFun
+
+ascode fun Run(String callback; ):
+    ExecuteAt()<"@p"; $::callback>
+Run
+
+fun Main():
+    Int myLocalVar = 1
+    Run()<<%Summon()<"sheep"; "~"; "~"; "~">%>>
+    // Neuille de ligne \/\/
+Main

@@ -1,0 +1,7 @@
+%import executeas.uchc
+%import print.uchc
+
+// Checks if "inHandMcId" is in the player's hand
+ascode fun InHand(String inHandMcId; String inHandCallback;):
+    As()<&"@a[nbt={SelectedItem:{id:'${$::inHandMcId}'}}]"; $::inHandCallback>
+InHand

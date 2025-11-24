@@ -1,0 +1,15 @@
+%import events/register.uchc
+%import events/reset.uchc
+%import whileeq.ucl
+%import executeas.uchc
+
+ascode fun EvRunner(String evRunnerScoreboardName; String evRunnerCallback;):
+    As()<&"@a[scores={__sys_event_${$::evRunnerScoreboardName}=1..}]"; $::evRunnerCallback>
+    As()<&"@a[scores={__sys_event_${$::evRunnerScoreboardName}=1..}]"; <%EvReset()<$::evRunnerScoreboardName>%>>
+EvRunner
+
+ascode fun EvRegister(String evRegisterScoreboardName; String evRegisterEvent; String evRegisterCallback;):
+    Int {&"__sys_stop_${$::evRegisterScoreboardName}"} = 0
+    EventRegisterUCHC()<$::evRegisterScoreboardName; $::evRegisterEvent>
+    WhileEqual()<&"__sys_stop_${$::evRegisterScoreboardName}"; 0; <%EvRunner()<$::evRegisterScoreboardName; $::evRegisterCallback>%>>
+EvRegister

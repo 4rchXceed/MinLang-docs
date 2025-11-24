@@ -1,0 +1,6 @@
+// Globals
+const String $armorStand = "@e[type=armor_stand]"
+
+const String $notFireBall = "tag=!FireBall"
+
+const Int $canFireWhenMaxDistance = 100

@@ -1,0 +1,2 @@
+// Run if the block is not a specific block
+[IfNotBlock(String pos; String blockType; String command;)] => <execute unless block ?pos? ?blockType? run ?command?>

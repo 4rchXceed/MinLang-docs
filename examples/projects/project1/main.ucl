@@ -1,0 +1,30 @@
+%import globalvars.ucl
+%import events/event.ucl
+%import print.uchc
+%import bulletutils.ucl
+%import player/inhand.ucl
+%import player/ininventory.ucl
+%import executeat.uchc
+%import entity/tp.uchc
+%import entity/summon.uchc
+%import executeas.uchc
+%import player/clear.uchc
+%import entity/inradius.uchc
+%import entity/kill.uchc
+%import player/replaceitem.uchc
+
+fun WhenOk():
+    NotEntity()<"@e[tag=projectile]"; <%Clear()<"minecraft:iron_nugget"; 1>%>>
+    NotEntity()<"@e[tag=projectile]"; <%As()<"@p"; <%AtAnchored()<"@s"; <%SummonData()<"armor_stand"; "^ ^ ^"; "{Invisible:true,Invulnerable:true,Tags:['projectile']}">%>>%>>%>>
+WhenOk
+
+fun Checks():
+    InHand()<"minecraft:bow"; <%InInventory()<"minecraft:iron_nugget"; <%WhenOk()<>%>>%>> // If bow in hand and iron_nugget in inventory
+    InHand()<"minecraft:crossbow"; <%InInventory()<"minecraft:iron_nugget"; <%ReplaceItem()<"@p"; "crossbow[charged_projectiles=[{id:'minecraft:arrow',count:1}]]">%>>%>>
+Checks
+
+fun Main():
+    Kill()<"@e[tag=raycast]">
+    As()<"@p"; <%AtAnchored()<"@s"; <%SummonData()<"armor_stand"; "^ ^ ^35"; "{Invisible:true,Invulnerable:true,Tags:['raycast']}">%>>%>>
+    EvRegister()<"sneaking"; "minecraft.custom:minecraft.sneak_time"; <%At()<"@p"; <%Checks()<>%>>%>>
+Main

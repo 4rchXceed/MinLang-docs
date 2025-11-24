@@ -1,0 +1,8 @@
+%import entity/summon.uchc
+%import executeat.uchc
+%import entity/kill.uchc
+
+ascode fun ExplodeAt(String explodeAtAs;):
+    At()<$::explodeAtAs; <%SummonData()<"tnt"; "~ ~ ~"; "{Fuse:0}">%>>
+    Kill()<$::explodeAtAs>
+ExplodeAt

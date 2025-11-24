@@ -1,0 +1,2 @@
+// /item replace
+[ReplaceItem(String selector; String newItem;)] => <item replace entity ?selector? weapon with ?newItem?>
