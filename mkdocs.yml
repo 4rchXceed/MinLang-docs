@@ -1,5 +1,7 @@
 site_name: MinLang + SeriaLang Documentation
-
+repo_url: https://github.com/4rchXceed/MinLang
+edit_uri: https://github.com/4rchXceed/MinLang-docs/tree/master/docs
+site_dir: MinLang-docs
 nav:
   - Home: index.md
   - Get Started: General/GetStarted.md
