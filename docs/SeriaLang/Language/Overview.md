@@ -21,7 +21,7 @@ The SeriaLang compiler is a command line tool that takes a `.ucl` file and compi
 
 ## Common Command Line Arguments
 
-(See [CommandLineArguments.md](Compiler/CommandLineArguments.md) for more details)
+(See [CommandLineArguments.md](../Compiler/CommandLineArguments.md) for more details)
 
 - -c+=verbose: Enables verbose output during the type checking process. (a hella lot of debug prints) (Use it with -c+=no-progress to avoid errors)
 
@@ -33,7 +33,7 @@ The SeriaLang compiler is a command line tool that takes a `.ucl` file and compi
 
 SeriaLang has a set of exceptions that can be thrown during the compilation process. These exceptions are used to indicate errors in the source code or issues during the compilation process.
 
-(See [Exceptions.md](Compiler/Exceptions.md) for more details)
+(See [Exceptions.md](../Compiler/Exceptions.md) for more details)
 
 An exception can be ignored by using the `-c+=ignore-<error_code>` command line argument. Replace `<error_code>` with the actual code to ignore.
 

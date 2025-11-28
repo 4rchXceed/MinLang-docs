@@ -2,6 +2,7 @@ site_name: MinLang + SeriaLang Documentation
 
 nav:
   - Home: index.md
+  - Get Started: General/GetStarted.md
   - SeriaLang:
       - Compiler:
           - Exceptions: SeriaLang/Compiler/Exceptions.md
