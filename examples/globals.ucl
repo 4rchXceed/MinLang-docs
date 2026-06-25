@@ -1,3 +1,0 @@
-// Constants
-const String $printText = "Test"
-const Void $null = null

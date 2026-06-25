@@ -1,0 +1,140 @@
+%import libmc/print.uchc
+%import GameEngine/game_engine.ucl
+%import GameEngine/point.ucl
+%import GameEngine/raycast.ucl
+%import GameEngine/collider.ucl
+%import GameEngine/utils.ucl
+%import libmc/execute.uchc
+%import libmc/entity/tp.uchc
+%import libmc/blocks/fill.uchc
+%import libmc/executeat.uchc
+%import libmc/entity/kill.uchc
+
+const String $entityAsPointData = ",NoAI:1b,NoGravity:1b,Invulnerable:1b"
+// GENERIC
+const Int $areaSizeWithMagins = -1 // -margin
+// WIDTH
+const Int $areaSizeW = 30
+const Int $areaSizeMarginsW = 31 // areaSize + margin
+// HEIGHT
+const Int $areaSizeH = 20
+const Int $areaSizeMarginsH = 21 // areaSize + margin
+
+const String $p1 = "@p"
+const String $baseRaycastP1Pos = "174 110 ~"
+const String $p1X = "175" // X pos of p1's bounce pad
+const String $p1XMargin = "174" // X pos of p1's bounce pad - margin
+const String $p1Y = "99" // X pos of p1's bounce pad
+const Int $p1PlatformSize = 7
+
+
+fun Main():
+    // Declare the variables
+    Int direction = 1
+    Int died = 0
+    // Init the "engine"
+    GameEngine()<"149 100 -144"; $::areaSizeW; $::areaSizeH; <%InitMain()<>%>>
+    // Create the objects
+    CreateMesh()<"point"; "sheep"; <%SetPos()<"point"; 1; 1>%>; $::entityAsPointData>
+    InitPlatform()<>
+    // Raycast
+    LookAtRaycast()<"p1Raycast">
+    // Start the game loop
+    GameLoop()<>
+Main
+
+fun InitMain():
+    TpEntity()<$::p1; "182 110 -137">
+InitMain
+
+fun InitPlatform():
+    // Reset old platforms
+    CreateCollider()<"air"; 0; 0; $::areaSizeMarginsW; $::areaSizeMarginsH> // Top
+    CreateCollider()<"black_concrete"; 0; 0; $::areaSizeW; $::areaSizeWithMagins> // Top
+    CreateCollider()<"red_concrete"; 0; $::areaSizeH; $::areaSizeW; $::areaSizeMarginsH> // Bottom
+    CreateCollider()<"blue_concrete"; 0; 0; $::areaSizeWithMagins; $::areaSizeH> // Left
+    CreateCollider()<"white_concrete"; $::areaSizeW; 0; $::areaSizeMarginsW; $::areaSizeH> // Right
+InitPlatform
+
+ascode fun MoveBall(String id; String varId;):
+    If (#::{$::varId} = 0): MoveStatic()<$::id; 1; 1> // Bottom Right
+    If (#::{$::varId} = 1): MoveStatic()<$::id; -1; 1> // Bottom Left
+    If (#::{$::varId} = 2): MoveStatic()<$::id; 1; -1> // Top Right
+    If (#::{$::varId} = 3): MoveStatic()<$::id; -1; -1> // Top Left
+MoveBall
+
+ascode fun CheckBallCollision(String id;):
+    CheckCollision()<$::id; "black_concrete"; <%TopCollision()<$::id>%>>
+    CheckCollision()<$::id; "red_concrete"; <%BottomCollision()<$::id>%>>
+    CheckCollision()<$::id; "blue_concrete"; <%LeftCollision()<$::id>%>>
+    CheckCollision()<$::id; "green_concrete"; <%RightCollision()<$::id>%>>
+    CheckCollision()<$::id; "white_concrete"; <%Die()<$::id>%>>
+CheckBallCollision
+
+fun Die():
+    Print()<"You DIED! MOUAHAHAHA">
+    #::died::Set()<1>
+    Kill()<$::p1>
+Die
+
+ascode fun TopCollision(String id;):
+    If (#::direction = 2): Set0()<>
+    If (#::direction = 3): Set1()<>
+    MoveStatic()<$::id; 0; 1>
+TopCollision
+
+ascode fun BottomCollision(String id;):
+    If (#::direction = 0): Set2()<>
+    If (#::direction = 1): Set3()<>
+    MoveStatic()<$::id; 0; -1>
+BottomCollision
+
+ascode fun LeftCollision(String id;):
+    If (#::direction = 1): Set0()<>
+    If (#::direction = 3): Set2()<>
+    MoveStatic()<$::id; 1; 0>
+LeftCollision
+
+ascode fun RightCollision(String id;):
+    If (#::direction = 0): Set1()<>
+    If (#::direction = 2): Set3()<>
+    MoveStatic()<$::id; -1; 0>
+RightCollision
+
+fun Set0():
+    #::direction::Set()<0>
+Set0
+
+fun Set1():
+    #::direction::Set()<1>
+Set1
+
+fun Set2():
+    #::direction::Set()<2>
+Set2
+
+fun Set3():
+    #::direction::Set()<3>
+Set3
+
+fun GameLoopWrapper():
+    GameLoop()<>
+GameLoopWrapper
+
+fun UpdatePlatform():
+    // Update the lookat raycast
+    UpdateLookAtRaycast()<"p1Raycast"; $::p1>
+    // Ensure the player don't move
+    At()<"@e[tag=p1Raycast]"; <%TpEntity()<"@e[tag=p1Raycast]"; $::baseRaycastP1Pos>%>>
+    // Set the "tracker"
+    At()<$::gameCenterEntity; <%FillBlocks()<&"${$::p1X} ~-1 ~"; &"${$::p1XMargin} ~-1 ~${$::areaSizeH}"; "air">%>>
+    At()<"@e[tag=p1Raycast]"; <%FillBlocks()<&"${$::p1X} ${$::p1Y} ~"; &"${$::p1XMargin} ${$::p1Y} ~${$::p1PlatformSize}"; "green_concrete">%>>
+UpdatePlatform
+
+fun GameLoop():
+    // MakeGravity()<"point">
+    CheckBallCollision()<"point">
+    MoveBall()<"point"; "direction">
+    UpdatePlatform()<>
+    If (#::died = 0): GameLoopWrapper()<>
+GameLoop

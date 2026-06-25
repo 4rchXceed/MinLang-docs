@@ -21,12 +21,14 @@ nav:
           - Pointers: SeriaLang/Language/Pointers.md
           - String Concat: SeriaLang/Language/Concat.md
   - MinLang:
-        - Compiler:
-            - Exceptions: MinLang/Compiler/Exceptions.md
-            - CommandLine Arguments: MinLang/Compiler/CommandLineArguments.md
-        - Overview: MinLang/Overview.md
-        - Limitations: MinLang/Limitations.md
-        - Libraries:
-            - stdlib: MinLang/Libraries/stdlib.md
-            - mclib: MinLang/Libraries/libmc.md
+      - Compiler:
+          - Exceptions: MinLang/Compiler/Exceptions.md
+          - CommandLine Arguments: MinLang/Compiler/CommandLineArguments.md
+      - Overview: MinLang/Overview.md
+      - Limitations: MinLang/Limitations.md
+      - Libraries:
+          - stdlib: MinLang/Libraries/stdlib.md
+          - mclib: MinLang/Libraries/libmc.md
+  - Zed Support:
+      - Explaination of the Zed Editor Language Support: ZedLangSupport/Index.md
 theme: readthedocs

@@ -15,7 +15,7 @@
     - [Variables](SeriaLang/Language/Variables.md)
     - [Comments](SeriaLang/Language/Comments.md)
     - [Functions](SeriaLang/Language/Functions.md)
-    - [SeriaLang Header File](SeriaLang/Language/ULHC.md)
+    - [SeriaLang Header File](SeriaLang/Language/UCHC.md)
     - [If And For Statements](SeriaLang/Language/IfAndFor.md)
     - [Importing](SeriaLang/Language/Import.md)
 - [Compiler (Advanced)](SeriaLang/Compiler/Exceptions.md)
@@ -26,8 +26,11 @@
 - [Overview](MinLang/Overview.md)
 - [Limitations](MinLang/Limitations.md)
 - [Libraries](MinLang/Libraries/stdlib.md)
-    - [stdlib](MinLang/Libraries/stdlib.md)
-    - [mclib](MinLang/Libraries/libmc.md)
+    - [StdLib](MinLang/Libraries/stdlib.md)
+    - [LibMC](MinLang/Libraries/libmc.md)
 - [Compiler (Advanced)](MinLang/Compiler/Exceptions.md)
     - [Exceptions](MinLang/Compiler/Exceptions.md)
     - [CommandLine Arguments](MinLang/Compiler/CommandLineArguments.md)
+
+## Zed Editor Language Support
+- [ZedSupport](ZedLangSupport/Index.md)

@@ -1,0 +1,32 @@
+%import libmc/summon.uchc
+%import libmc/entity/tp.uchc
+%import libmc/asat.uchc
+%import libmc/execute.uchc
+%import libmc/executeas.uchc
+%import libmc/executeat.uchc
+%import libmc/print.uchc
+
+%import GameEngine/utils.ucl
+%import GameEngine/game_engine.ucl
+
+
+ascode fun CreateMesh(String id; String materialId; String then; String entityData;):
+    SummonData()<$::materialId; "~ ~ ~"; &"{Tags:['${$::id}']${$::entityData}}">
+    Execute()<$::then>
+CreateMesh
+
+ascode fun MoveStatic(String id; Float x; Float y;):
+    AsAt()<&"@e[tag=${$::id}]"; <%TpEntity()<"@s"; &"~${$::x} ~ ~${$::y}">%>>
+MoveStatic
+
+ascode fun SetPos(String id; Float x; Float y;):
+    At()<$::gameCenterEntity; <%As()<&"@e[tag=${$::id}]"; <%TpEntity()<"@s"; &"~${$::x} ~ ~${$::y}">%>>%>>
+SetPos
+
+ascode fun MakeGravity(String id;):
+    InBounds()<$::id; <%Gravity()<$::id; 1>%>>
+MakeGravity
+
+ascode fun Gravity(String id; Int gravity;):
+    MoveStatic()<$::id; 0; $::gravity>
+Gravity

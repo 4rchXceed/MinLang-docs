@@ -1,0 +1,31 @@
+%import libmc/summon.uchc
+%import GameEngine/utils.ucl
+%import libmc/executeat.uchc
+%import libmc/blocks/fill.uchc
+%import libmc/entity/tp.uchc
+%import libmc/blocks/not.uchc
+%import libmc/blocks/if.uchc
+%import libmc/execute.uchc
+
+const String $gameCenterEntity = "@e[tag=game_center,limit=1]"
+
+
+ascode fun GameEngine(String base; Int width; Int height; String afterInit;):
+    Int gameEngineWidth = $::width
+    HiddenEntity()<$::base; "game_center"; <%Init()<$::width; $::height; $::afterInit>%>>
+GameEngine
+
+ascode fun Init(Int width; Int height; String afterInit;):
+    //At()<$::gameCenterEntity; <%FillBlocks()<"~ ~ ~"; &"~${$::width} ~-2 ~${$::height}"; "minecraft:air">%>>
+    At()<$::gameCenterEntity; <%FillBlocks()<"~ ~-2 ~"; &"~${$::width} ~-2 ~${$::height}"; "minecraft:white_concrete">%>>
+    TpEntity()<$::gameCenterEntity; $::base>
+    Execute()<$::afterInit>
+Init
+
+ascode fun NotInBounds(String id; String ifOutOfBounds;):
+    At()<&"@e[tag=${$::id}]"; <%IfNotBlock()<"~ ~-2 ~"; "white_concrete"; $::ifOutOfBounds>%>>
+NotInBounds
+
+ascode fun InBounds(String id; String ifInBounds;):
+    At()<&"@e[tag=${$::id}]"; <%IfBlock()<"~ ~-2 ~"; "white_concrete"; $::ifInBounds>%>>
+InBounds

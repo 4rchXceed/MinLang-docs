@@ -1,5 +1,0 @@
-%import loop.ucl
-
-fun Main():
-    // Everything is in the loop
-Main

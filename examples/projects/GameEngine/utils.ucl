@@ -1,0 +1,10 @@
+%import libmc/execute.uchc
+
+// "Void" callback function
+fun VoidF():
+VoidF
+
+ascode fun HiddenEntity(String xyz; String tag; String then;):
+    SummonData()<"armor_stand"; $::xyz; &"{Invulnerable:true,Invisible:true,NoGravity:1b,Tags:['${$::tag}']}"> // Invisible:true,
+    Execute()<$::then>
+HiddenEntity

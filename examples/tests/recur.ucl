@@ -1,7 +1,0 @@
-fun MainCall():
-    Main()<>
-MainCall
-
-fun Main():
-    MainCall()<>
-Main

@@ -41,7 +41,7 @@ Here is an example of a ULHC file defining a simple print function:
 
 ```ucl
 fun Main():
-    Print("Hello, World!")
+    Print()<"Hello, World!">
 Main
 ```
 

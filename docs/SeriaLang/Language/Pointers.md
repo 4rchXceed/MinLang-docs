@@ -27,3 +27,7 @@ ascode fun WhileLt(String var; Int value; String whileLtCallback;):
     If (#::{$::var} < $::value): Execute()<$::self>
 WhileLt
 ```
+
+## Global to local variable pointer
+
+See [Variables.md](Variables.md) (end section)

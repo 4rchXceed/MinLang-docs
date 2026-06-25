@@ -2,6 +2,8 @@
 
 There's (like variables) a lot to say about functions.
 
+## Note: all "%import libmc/print.uchc" will only work if you use the bundle provided + MinLang
+
 ## Creation
 
 Functions are defined using the `fun` keyword, followed by the function name, parameters (if any), and a colon (`:`). The function body is indented below the function definition.
@@ -24,7 +26,7 @@ MyFunction
 ## Function Parameters
 
 Function parameters are defined within the parentheses following the function name. Each parameter must have a name and a type.
-Parameters are separated by semicolons (`;`).
+Parameters are separated by semicolons (`;`). You must end the function's declaration by `;`
 
 ```ucl
 fun Test(Int a; Int b;):
@@ -40,44 +42,54 @@ A parameter is a local variable, so you can access it using the `#::` prefix:
 
 ```ucl
 fun Test(Int a; Int b;):
-    #::a::Add(1)  // Adds 1 to the parameter 'a'
+    #::a::Add()<1>  // Adds 1 to the parameter 'a'
 Test
 ```
 
 ## Return Values
 
-Not yet supported, but will be in the future.
+Not yet supported, ~~but will be in the future.~~ probably won't happen
 
 ## Calling Functions
 
 To call a function, simply write its name followed by parentheses and angle brackets. If the function has parameters, provide the arguments within the angle brackets, separated by semicolons (`;`).
 
 ```ucl
-fun Greet(String name):
-    Print()<"Hello, " + #::name + "!">
-Greet
+%import libmc/print.uchc
+
+fun CheckAge(Int age;):
+    If (#::age >= 18): Print()<"You are major">
+    If (#::age < 18): Print()<"You are minor">
+CheckAge
 
 fun Main():
-    Greet()<"Alice">
+    // This import will only on MinLang + -Ilibmc
+    CheckAge()<18>
 Main
 ```
 
 If the function has no parameters, you can call it with empty angle brackets:
 
 ```ucl
+%import libmc/print.uchc
+
 fun SayHello():
     Print()<"Hello!">
 SayHello
 
 fun Main():
-    SayHello<>
+    SayHello()<>
 Main
 ```
 
 ## Main Function
 The `Main` function is a special function that serves as the entry point of the program. It is called automatically when the program starts.
 
+Note: this function must be present, otherwise error: 17
+
 ```ucl
+%import libmc/print.uchc
+
 fun Main():
     Print()<"This is the main function!">
 Main
@@ -142,3 +154,20 @@ WhileGt
 ```
 
  $::self is the function pointer to the current function (WhileGt in this case).
+
+### (MinLang specific) the loop flag
+The "loop" flag allows you to create a fast (repeating cmd block) loop that CANNOT be stopped and is started when the user launches the install command
+
+Example:
+```ucl
+%import libmc/print.uchc
+
+loop fun Loop():
+    Print()<"Looped!">
+Loop
+
+fun Main():
+Main
+```
+
+Note: No need to call `Loop()<>` to start the loop.

@@ -1,0 +1,14 @@
+%import GameEngine/utils.ucl
+%import libmc/entity/tp.uchc
+%import libmc/asat.uchc
+%import libmc/debug.uchc
+
+
+ascode fun LookAtRaycast(String id;):
+    HiddenEntity()<"~ ~1 ~"; $::id; <%VoidF()<>%>>
+LookAtRaycast
+
+ascode fun UpdateLookAtRaycast(String id; String target;):
+    Debug()<>
+    AsAt()<$::target; <%TpEntity()<&"@e[tag=${$::id}]"; "^ ^ ^10">%>>
+UpdateLookAtRaycast

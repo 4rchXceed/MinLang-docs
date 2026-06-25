@@ -1,0 +1,5 @@
+%import libmc/print.uchc
+
+fun Main():
+    Print()<"Hello World!">
+Main

@@ -10,12 +10,12 @@ If (#::myLocalVar = 1): PrintMsg()<>
 
 ### Condition
 
-- The condition must be a comparison between a local variable and a literal value.
+- The condition must be a comparison between a local variable and a literal value (or a global variable).
 - The comparison is handled by the compiler, not by the SeriaLang interpreter.
 - The condition can only be `=` (equal), `<` (less than), `>` (greater than), `<=` (less than or equal to), `>=` (greater than or equal to).
 - Adding ! before the comparison operator will negate the condition (e.g., `!=`, `!<`, `!>`, `!<=`, `!>=`).
 - The local variable must be of type `Int`.
-- The literal value must be of type `Int`.
+- The literal value must be of type `Int` AND can be a global variable.
 - You can compare a local variable to another local variable
 - You can compare a local variable to a global variable
 - You can compare a global variable to another global variable (the result will be hardcoded)

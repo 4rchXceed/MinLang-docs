@@ -9,9 +9,16 @@ You can download the latest release of the compiler from the [releases page](htt
 ## Run the compiler
 
 In each release you'll find these files:
+
 - *.dll, .pdb, .json: .NET assemblies required to run the compiler
+
 - run.sh: Bash script to run the compiler on Linux/MacOS
+
 - run.ps1: PowerShell script to run the compiler on Windows
+
+- Some libs to help you out
+
+- Zed language extension (install only works on Linux)
 
 ## Create your first program
 
@@ -24,8 +31,10 @@ fun Main():
 Main
 ```
 Then run the compiler with:
+
 - On Linux/MacOS:
 `./run.sh projet1/hello.ucl <coordinates>`
+
 - On Windows:
 `.\run.ps1 projet1/hello.ucl <coordinates>`
 

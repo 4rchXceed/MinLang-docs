@@ -1,0 +1,14 @@
+%import GameEngine/game_engine.ucl
+%import libmc/executeat.uchc
+%import libmc/blocks/fill.uchc
+%import libmc/print.uchc
+%import libmc/blocks/set.uchc
+
+
+ascode fun CreateCollider(String blockId; Int startX; Int startY; Int endX; Int endY;):
+    At()<$::gameCenterEntity; <%FillBlocks()<&"~${$::startX} ~-1 ~${$::startY}"; &"~${$::endX} ~-1 ~${$::endY}"; $::blockId>%>>
+CreateCollider
+
+ascode fun CheckCollision(String id; String blockId; String ifCollision;):
+    At()<&"@e[tag=${$::id}]"; <%IfBlock()<"~ ~-1 ~"; $::blockId; $::ifCollision>%>>
+CheckCollision

@@ -35,7 +35,7 @@ Their value type can be a literal, another global variable, or a "code block" (f
 To access a global variable, just use its name with a `$::` prefix:
 
 ```ucl
-print($::printText)
+print()<$::printText>
 ```
 
 ## Local Variables
@@ -59,16 +59,16 @@ Their value needs to be defined at the moment of declaration, and they can be ch
 To access a global variable, just use its name with a `#::` prefix:
 
 ```ucl
-Print(#::myLocalVar)
+print()<$::printText>
 ```
 
 ### Modifying
 To modify a local variable, just use its name with a `#::` prefix and then `::Set`, `::Add`, `::Sub`:
 
 ```ucl
-#::myLocalVar::Set(5)  // Sets the variable to 5
-#::myLocalVar::Add(3)  // Adds 3 to the variable (now it's 8)
-#::myLocalVar::Sub(2)  // Subtracts 2 from the variable (now it's 6)
+#::myLocalVar::Set()<5>  // Sets the variable to 5
+#::myLocalVar::Add()<3>  // Adds 3 to the variable (now it's 8)
+#::myLocalVar::Sub()<2>  // Subtracts 2 from the variable (now it's 6)
 ```
 
 I'm planning to implement more operations like `Mul`, `Div`, etc.
@@ -82,6 +82,29 @@ Because we use prefixes, as long as a variable name is valid and unique you can 
 You can pass a function call as a value to a parameter or a variable. It will return a String containing the commands to execute the function.
 Syntax: <%FunctionName()&lt;params...&gt;%>
 
+```ucl
+%import libmc/cmd.uchc
+
+ascode fun WhileGt(String var; Int value; String callback;):
+    If (#::{$::var} > $::value): Execute()<$::callback>
+    If (#::{$::var} > $::value): Execute()<$::self>
+WhileGt
+```
+
+You can then use the function call as a value:
+
+```ucl
+fun Main():
+    WhileGt("myLocalVar"; 10; <%Print()<"myLocalVar is greater than 10!">%)<>
+Main
+```
+
+## Global to local variable pointer
+
+You can use a global variable's name to "resolve" a local variable's name. You can also use string concat
+For this, you need to use `#::{$::globalName}` (or: `#::{&"my_super_${$::globalName}}_var"`)
+
+Example (same as above)
 ```ucl
 %import libmc/cmd.uchc
 
