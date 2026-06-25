@@ -15,7 +15,7 @@ nav:
           - Variables: SeriaLang/Language/Variables.md
           - Comments: SeriaLang/Language/Comments.md
           - Functions: SeriaLang/Language/Functions.md
-          - SeriaLang Header File: SeriaLang/Language/ULHC.md
+          - SeriaLang Header File: SeriaLang/Language/UCHC.md
           - If And For Statements: SeriaLang/Language/IfAndFor.md
           - Importing: SeriaLang/Language/Import.md
           - Pointers: SeriaLang/Language/Pointers.md
